@@ -28,7 +28,9 @@ public abstract class JsRuntimeChalBaseJCP extends JsChallengeProvider {
 
     private String playerJS = "";
     private String playerJSHash = "";
-    private final String repository = "yt-dlp/ejs";
+
+    // Track the current player hash loaded in the JS runtime
+    private String loadedPlayerHash = "";
 
     private final Map<ScriptType, String> scriptFilenames;
     private final Map<ScriptType, String> minScriptFilenames;
@@ -36,9 +38,6 @@ public abstract class JsRuntimeChalBaseJCP extends JsChallengeProvider {
     private Script libScript;
     private Script coreScript;
     private Script wrapperScript;
-
-    // Track the current player hash loaded in the JS runtime
-    private String loadedPlayerHash = "";
 
     // LRU Cache equivalent
     protected final Map<String, String> cache = Collections.synchronizedMap(
@@ -53,17 +52,17 @@ public abstract class JsRuntimeChalBaseJCP extends JsChallengeProvider {
     );
 
     public JsRuntimeChalBaseJCP() {
-        Map<ScriptType, String> sMap = new HashMap<>();
-        sMap.put(ScriptType.LIB, LIB_PREFIX + "yt.solver.lib.js");
-        sMap.put(ScriptType.CORE, LIB_PREFIX + "yt.solver.core.js");
-        sMap.put(ScriptType.WRAPPER, LIB_PREFIX + "yt.solver.wrapper.js");
-        scriptFilenames = Collections.unmodifiableMap(sMap);
+        scriptFilenames = Map.of(
+            ScriptType.LIB, LIB_PREFIX + "yt.solver.lib.js",
+            ScriptType.CORE, LIB_PREFIX + "yt.solver.core.js",
+            ScriptType.WRAPPER, LIB_PREFIX + "yt.solver.wrapper.js"
+        );
 
-        Map<ScriptType, String> mMap = new HashMap<>();
-        mMap.put(ScriptType.LIB, "yt.solver.lib.min.js");
-        mMap.put(ScriptType.CORE, "yt.solver.core.min.js");
-        mMap.put(ScriptType.WRAPPER, "yt.solver.wrapper.min.js");
-        minScriptFilenames = Collections.unmodifiableMap(mMap);
+        minScriptFilenames = Map.of(
+            ScriptType.LIB, "yt.solver.lib.min.js",
+            ScriptType.CORE, "yt.solver.core.min.js",
+            ScriptType.WRAPPER, "yt.solver.wrapper.min.js"
+        );
     }
 
     @Override
@@ -182,25 +181,12 @@ public abstract class JsRuntimeChalBaseJCP extends JsChallengeProvider {
         String escapedPlayer = gson.toJson(playerJS);
         String escapedHash = gson.toJson(playerHash);
 
-        StringBuilder sb = new StringBuilder();
-
-        if (preprocessed) {
-            // Use setPreprocessedPlayer for already-preprocessed player
-            sb.append(String.format("setPreprocessedPlayer(%s, %s);\n", escapedPlayer, escapedHash));
-            sb.append("JSON.stringify({type: 'result', responses: []});\n");
-        } else {
-            // Use setPlayer for raw player, then do a dummy solve to trigger preprocessing
-            sb.append(String.format("setPlayer(%s, %s);\n", escapedPlayer, escapedHash));
-            // Do a minimal solve to trigger preprocessing and get the preprocessed player back
-            sb.append("JSON.stringify((function() {\n");
-            sb.append("  var result = jscw({requests: [{type: 'n', challenges: []}]});\n");
-            sb.append("  var pp = getPreprocessedPlayer();\n");
-            sb.append("  if (pp) result.preprocessed_player = pp;\n");
-            sb.append("  return result;\n");
-            sb.append("})());\n");
-        }
-
-        return sb.toString();
+        return String.format(
+                "\nsetPlayer(%s, %s, %s);\n",
+                escapedPlayer,
+                escapedHash,
+                preprocessed ? "true" : "false"
+        ) + "\nJSON.stringify({type: 'result', responses: []});\n";
     }
 
     /**
@@ -210,10 +196,10 @@ public abstract class JsRuntimeChalBaseJCP extends JsChallengeProvider {
     private String constructWrapperStdin(List<JsChallengeRequest> requests) {
         List<Map<String, Object>> jsonRequests = new ArrayList<>();
         for (JsChallengeRequest request : requests) {
-            Map<String, Object> reqMap = new HashMap<>();
-            reqMap.put("type", request.getType().getValue());
-            reqMap.put("challenges", request.getInput().getChallenges());
-            jsonRequests.add(reqMap);
+            jsonRequests.add(Map.of(
+                "type", request.getType().getValue(),
+                "challenges", request.getInput().getChallenges()
+            ));
         }
 
         Map<String, Object> data = new HashMap<>();
@@ -332,6 +318,7 @@ public abstract class JsRuntimeChalBaseJCP extends JsChallengeProvider {
             synchronized (cache) {
                 String code = cache.get(fileName);
                 if (code == null) {
+                    String repository = "yt-dlp/ejs";
                     String url = "https://github.com/" + repository + "/releases/download/" + SCRIPT_VERSION + "/" + fileName;
                     code = JavaScriptManager.downloadUrl(url);
                     Logger.printDebug(() -> "Downloading challenge solver " + scriptType.getValue() + " script from " + url);

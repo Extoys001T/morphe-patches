@@ -7,6 +7,12 @@
 
 package app.morphe.extension.shared.spoof.js.nsigsolver.impl;
 
+import static androidx.javascriptengine.JavaScriptConsoleCallback.ConsoleMessage.LEVEL_DEBUG;
+import static androidx.javascriptengine.JavaScriptConsoleCallback.ConsoleMessage.LEVEL_ERROR;
+import static androidx.javascriptengine.JavaScriptConsoleCallback.ConsoleMessage.LEVEL_INFO;
+import static androidx.javascriptengine.JavaScriptConsoleCallback.ConsoleMessage.LEVEL_LOG;
+import static androidx.javascriptengine.JavaScriptConsoleCallback.ConsoleMessage.LEVEL_WARNING;
+
 import androidx.javascriptengine.EvaluationFailedException;
 import androidx.javascriptengine.IsolateStartupParameters;
 import androidx.javascriptengine.JavaScriptIsolate;
@@ -14,6 +20,7 @@ import androidx.javascriptengine.JavaScriptSandbox;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -38,7 +45,6 @@ public class JsEngineChallengeProvider extends JsRuntimeChalBaseJCP {
             LIB_PREFIX + "astring-1.9.0.min.js"
     );
 
-    private ExecutorService jsExecutor = Executors.newSingleThreadExecutor();
     private JavaScriptSandbox jsSandbox;
     private JavaScriptIsolate jsIsolate;
     private int executeCount = 0;
@@ -69,26 +75,6 @@ public class JsEngineChallengeProvider extends JsRuntimeChalBaseJCP {
         }
     }
 
-    private void ensureIsolate() throws Exception {
-        if (jsSandbox == null) {
-            jsSandbox = JavaScriptSandbox.createConnectedInstanceAsync(
-                    Utils.getContext().getApplicationContext()
-            ).get();
-        }
-        if (jsIsolate == null) {
-            // If Android System WebView 110+ (released February 2023) is installed, set the maximum heap memory.
-            // This can avoid OOM issues.
-            if (jsSandbox.isFeatureSupported(JavaScriptSandbox.JS_FEATURE_ISOLATE_MAX_HEAP_SIZE)) {
-                IsolateStartupParameters params = new IsolateStartupParameters();
-                // Since the size of the Player JS is around 3MB, a maximum heap memory of 128MB is sufficient.
-                params.setMaxHeapSizeBytes(128 * 1024 * 1024); // 128MB
-                jsIsolate = jsSandbox.createIsolate(params);
-            } else { // ~ Android System WebView 109
-                jsIsolate = jsSandbox.createIsolate();
-            }
-        }
-    }
-
     private void resetIsolate() {
         if (jsIsolate != null) {
             try {
@@ -105,33 +91,12 @@ public class JsEngineChallengeProvider extends JsRuntimeChalBaseJCP {
     @Override
     protected String runJsRuntime(String stdin) throws JsChallengeProviderError {
         warmup();
-        return runJS(stdin, false);
-    }
-
-    private String runJS(String stdin, boolean warmup) throws JsChallengeProviderError {
         try {
-            String results = jsExecutor.submit(() -> {
-                ensureIsolate();
+            String result = jsIsolate.evaluateJavaScriptAsync(stdin).get();
+            executeCount++;
 
-                String result = jsIsolate.evaluateJavaScriptAsync(stdin).get();
-                // Periodically reset the isolate to prevent memory leaks.
-                /*
-                if (!warmup) {
-                    resetIsolate();
-                }
-                 */
-                executeCount++;
-
+            if (Utils.isNotEmpty(result)) {
                 return result;
-            }).get();
-
-            // The results of the warmup are not used anywhere
-            if (warmup) {
-                return "";
-            }
-
-            if (Utils.isNotEmpty(results)) {
-                return results;
             } else {
                 var message = "JavaScript engine error: empty response";
                 Logger.printException(() -> message);
@@ -150,35 +115,74 @@ public class JsEngineChallengeProvider extends JsRuntimeChalBaseJCP {
                         // ignore
                     }
                 }
-                Logger.printException(() -> "JavaScript engine error, warmup: " + warmup, jsError);
+                Logger.printException(() -> "JavaScript engine error", jsError);
                 throw new JsChallengeProviderError("JavaScript engine error: " + jsError.getMessage(), jsError);
             }
-            Logger.printException(() -> "Execution failed, warmup: " + warmup, e);
+            Logger.printException(() -> "Execution failed", e);
             throw new JsChallengeProviderError("Execution failed", e);
         }
     }
 
     public void warmup() {
-        // If jsExecutor terminates for an unexpected reason, it will be recreated
-        if (jsExecutor.isShutdown() || jsExecutor.isTerminated()) {
-            try {
-                jsExecutor = Executors.newSingleThreadExecutor();
-                executeCount = 0;
-                resetLoadedPlayerState();
-            } catch (Exception ex) {
-                Logger.printException(() -> "Failed to create JS executor", ex);
+        try {
+            // If the JavaScript sandbox terminates for an unexpected reason, recreate it
+            if (jsSandbox == null) {
+                Logger.printDebug(() -> "Creating JavaScript sandbox instance");
+                jsSandbox = JavaScriptSandbox.createConnectedInstanceAsync(
+                        Utils.getContext().getApplicationContext()
+                ).get();
             }
-        }
+            if (jsIsolate == null) {
+                // If Android System WebView 110+ (released February 2023) is installed, set the maximum heap memory.
+                // This can avoid OOM issues.
+                if (jsSandbox.isFeatureSupported(JavaScriptSandbox.JS_FEATURE_ISOLATE_MAX_HEAP_SIZE)) {
+                    IsolateStartupParameters params = new IsolateStartupParameters();
+                    // Since the size of the Player JS is around 3MB, a maximum heap memory of 128MB is sufficient.
+                    params.setMaxHeapSizeBytes(128 * 1024 * 1024); // 128MB
+                    Logger.printDebug(() -> "Creating JavaScript isolate instance with max heap size " + params.getMaxHeapSizeBytes() + " bytes");
+                    jsIsolate = jsSandbox.createIsolate(params);
+                } else { // ~ Android System WebView 109
+                    Logger.printDebug(() -> "Creating JavaScript isolate instance (max heap size not supported)");
+                    jsIsolate = jsSandbox.createIsolate();
+                }
+                jsIsolate.addOnTerminatedCallback(terminationInfo -> {
+                    Logger.printInfo(() -> String.format(
+                            "JavaScript isolate terminated (%s): %s",
+                            terminationInfo.getStatusString(),
+                            terminationInfo.getMessage()
+                    ));
+                    executeCount = 0;
+                    resetLoadedPlayerState();
+                    jsIsolate = null;
+                });
 
-        if (executeCount == 0) {
-            try {
-                String commonStdin = constructCommonStdin();
-
-                // Declare a global function
-                runJS(commonStdin, true);
-            } catch (Exception e) {
-                // ignore warmup errors
+                if (jsSandbox.isFeatureSupported(JavaScriptSandbox.JS_FEATURE_CONSOLE_MESSAGING)) {
+                    jsIsolate.setConsoleCallback(callback -> {
+                        Logger.LogMessage message = () -> "JS Console: " + callback;
+                        switch (callback.getLevel()) {
+                            case LEVEL_LOG:
+                            case LEVEL_DEBUG:
+                                Logger.printDebug(message);
+                                break;
+                            case LEVEL_INFO:
+                            case LEVEL_WARNING:
+                                Logger.printInfo(message);
+                                break;
+                            case LEVEL_ERROR:
+                                Logger.printException(message);
+                                break;
+                        }
+                    });
+                }
             }
+
+            String commonStdin = constructCommonStdin();
+
+            // Declare a global function
+            jsIsolate.evaluateJavaScriptAsync(commonStdin).get();
+        } catch (Exception e) {
+            // ignore warmup errors
+            Logger.printInfo(() -> "Error during JavaScript engine warmup, but ignoring", e);
         }
     }
 }

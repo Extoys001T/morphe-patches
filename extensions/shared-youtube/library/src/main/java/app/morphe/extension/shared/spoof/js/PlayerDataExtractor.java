@@ -39,13 +39,13 @@ public class PlayerDataExtractor {
 
             var type = response.getType();
             if (type == JsChallengeType.N) {
-                if (nParams != null && !nParams.isEmpty()) {
+                if (nParams != null) {
                     for (String key : nParams) {
                         nProcessed.add(response.getOutput().getResults().get(key));
                     }
                 }
             } else if (type == JsChallengeType.SIG) {
-                if (sParams != null && !sParams.isEmpty()) {
+                if (sParams != null) {
                     for (String key : sParams) {
                         sProcessed.add(response.getOutput().getResults().get(key));
                     }

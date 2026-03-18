@@ -15,7 +15,7 @@
  */
 var _playerCache = {
     playerHash: null,
-    preprocessedPlayer: null,
+    playerJs: null,
     isPreprocessed: false
 };
 
@@ -25,27 +25,18 @@ var _playerCache = {
  *
  * @param {string} playerJS - The raw player JavaScript code
  * @param {string} playerHash - A hash of the player JS for cache validation
+ * @param {boolean} [isPreprocessed=false] - Whether the provided player JS is already preprocessed
  */
-function setPlayer(playerJS, playerHash) {
-    if (_playerCache.playerHash !== playerHash) {
+function setPlayer(playerJS, playerHash, isPreprocessed) {
+    if (_playerCache.playerHash !== playerHash || isPreprocessed !== _playerCache.isPreprocessed) {
         _playerCache.playerHash = playerHash;
-        _playerCache.preprocessedPlayer = playerJS;
-        _playerCache.isPreprocessed = false;
-    }
-}
+        _playerCache.playerJs = playerJS;
+        _playerCache.isPreprocessed = isPreprocessed;
 
-/**
- * Set preprocessed player JS code.
- * Use this when you already have preprocessed player JS from cache.
- *
- * @param {string} preprocessedPlayer - The preprocessed player JavaScript code
- * @param {string} playerHash - A hash of the original player JS for cache validation
- */
-function setPreprocessedPlayer(preprocessedPlayer, playerHash) {
-    if (_playerCache.playerHash !== playerHash) {
-        _playerCache.playerHash = playerHash;
-        _playerCache.preprocessedPlayer = preprocessedPlayer;
-        _playerCache.isPreprocessed = true;
+        if (!isPreprocessed) {
+            // If the player is not preprocessed, we will preprocess it on the first jscw() call
+            jscw({requests: [{type: 'n', challenges: []}]})
+        }
     }
 }
 
@@ -54,7 +45,7 @@ function setPreprocessedPlayer(preprocessedPlayer, playerHash) {
  */
 function clearPlayerCache() {
     _playerCache.playerHash = null;
-    _playerCache.preprocessedPlayer = null;
+    _playerCache.playerJs = null;
     _playerCache.isPreprocessed = false;
 }
 
@@ -65,6 +56,19 @@ function clearPlayerCache() {
  */
 function getPlayerHash() {
     return _playerCache.playerHash;
+}
+
+/**
+ * Get the current player JS, or null if no player is loaded.
+
+ * @returns {string|null} The current player JavaScript code
+ */
+function getPlayerJs() {
+    return _playerCache.playerJs;
+}
+
+function isPlayerPreprocessed() {
+    return _playerCache.isPreprocessed;
 }
 
 /**
@@ -92,25 +96,26 @@ function isPlayerReady(playerHash) {
  * @returns {object} The solver output with responses and optionally preprocessed_player
  */
 function jscw(input) {
-    if (!_playerCache.preprocessedPlayer) {
+    var playerJs = getPlayerJs();
+    if (!playerJs) {
         return {
             type: "error",
-            error: "No player loaded. Call setPlayer() or setPreprocessedPlayer() first."
+            error: "No player loaded. Call setPlayer() first."
         };
     }
 
     // Build the input for the underlying jsc() function
     var jscInput;
-    if (_playerCache.isPreprocessed) {
+    if (isPlayerPreprocessed()) {
         jscInput = {
             type: "preprocessed",
-            preprocessed_player: _playerCache.preprocessedPlayer,
+            preprocessed_player: playerJs,
             requests: input.requests
         };
     } else {
         jscInput = {
             type: "player",
-            player: _playerCache.preprocessedPlayer,
+            player: playerJs,
             requests: input.requests,
             output_preprocessed: true
         };
@@ -120,36 +125,20 @@ function jscw(input) {
     var output = jsc(jscInput);
 
     // If we got preprocessed player back, cache it
-    if (output.preprocessed_player && !_playerCache.isPreprocessed) {
-        _playerCache.preprocessedPlayer = output.preprocessed_player;
-        _playerCache.isPreprocessed = true;
+    if (output.preprocessed_player && !isPlayerPreprocessed()) {
+        setPlayer(output.preprocessed_player, getPlayerHash(), true);
     }
 
     return output;
-}
-
-/**
- * Get the preprocessed player if available.
- * This can be used by Java code to cache the preprocessed player.
- *
- * @returns {string|null} The preprocessed player JS, or null if not available
- */
-function getPreprocessedPlayer() {
-    if (_playerCache.isPreprocessed) {
-        return _playerCache.preprocessedPlayer;
-    }
-    return null;
 }
 
 // Export for testing
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         setPlayer: setPlayer,
-        setPreprocessedPlayer: setPreprocessedPlayer,
         clearPlayerCache: clearPlayerCache,
         getPlayerHash: getPlayerHash,
         isPlayerReady: isPlayerReady,
-        jscw: jscw,
-        getPreprocessedPlayer: getPreprocessedPlayer
+        jscw: jscw
     };
 }
