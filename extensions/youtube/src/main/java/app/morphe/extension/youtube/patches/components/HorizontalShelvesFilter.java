@@ -69,13 +69,18 @@ final class HorizontalShelvesFilter extends Filter {
         );
     }
 
+    private boolean isPlayerOrDescription() {
+        return EngagementPanel.isDescription()
+                || PlayerType.getCurrent().isMaximizedOrFullscreen()
+                || isActionBarVisible.get()
+                || ShortsPlayerState.isOpen();
+    }
+
     private boolean hideShelves(ContextInterface contextInterface) {
-        if (!Settings.HIDE_HORIZONTAL_SHELVES.get()) {
+        if (!Settings.HIDE_HORIZONTAL_SHELVES.get() || isPlayerOrDescription()) {
             return false;
         }
         return contextInterface.isHomeFeedOrRelatedVideo()
-                || PlayerType.getCurrent().isMaximizedOrFullscreen()
-                || isActionBarVisible.get()
                 || NavigationBar.isSearchBarActive()
                 || NavigationBar.isBackButtonVisible()
                 || NavigationButton.getSelectedNavigationButton() != NavigationButton.LIBRARY;
@@ -97,7 +102,7 @@ final class HorizontalShelvesFilter extends Filter {
             return true;
         }
         if (descriptionBuffers.check(buffer).isFiltered()) {
-            return EngagementPanel.isDescription() || PlayerType.getCurrent().isMaximizedOrFullscreen() || isActionBarVisible.get() || ShortsPlayerState.isOpen();
+            return isPlayerOrDescription();
         }
         return hideShelves(contextInterface);
     }
