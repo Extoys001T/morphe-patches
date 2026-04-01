@@ -31,9 +31,9 @@
  * applicable to this file.
  */
 
-package app.morphe.util.resource
+package app.morphe.patches.util.resource
 
-import app.morphe.patches.all.misc.resources.StringResourceSanitizer.sanitizeAndroidResourceString
+import app.morphe.util.resource.StringResourceSanitizer.sanitizeAndroidResourceString
 import app.morphe.patches.all.misc.resources.localesAll
 import app.morphe.util.inputStreamFromBundledResource
 import org.w3c.dom.Element
@@ -43,7 +43,7 @@ import javax.xml.parsers.DocumentBuilderFactory
 /**
  * Checks resource strings for invalid strings that will fail resource compilation.
  */
-internal fun main(args: Array<String>) {
+fun main(args: Array<String>) {
     var stringsChecked = 0
 
     val exceptions = mutableListOf<Exception>()

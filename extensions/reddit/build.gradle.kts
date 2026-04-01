@@ -1,6 +1,7 @@
 dependencies {
     compileOnly(project(":extensions:shared:library"))
     compileOnly(project(":extensions:reddit:stub"))
+    implementation(libs.morphe.extensions.library)
 
     // Used by MorpheSettingsIconVectorDrawable.
     implementation(libs.androidx.core)

@@ -131,11 +131,11 @@ open class ExtensionHook(
     private val insertIndexResolver: BytecodePatchContext.(Method) -> Int = { 0 },
     private val contextRegisterResolver: BytecodePatchContext.(Method) -> String = { "p0" },
 ) {
-    context(BytecodePatchContext)
+    context(ctx: BytecodePatchContext)
     operator fun invoke(extensionClassDescriptor: String) {
         fingerprint.method.apply {
-            val insertIndex = insertIndexResolver(this)
-            val contextRegister = contextRegisterResolver(this)
+            val insertIndex = ctx.insertIndexResolver(this)
+            val contextRegister = ctx.contextRegisterResolver(this)
 
             addInstruction(
                 insertIndex,

@@ -18,6 +18,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.morphe.extensions.library)
     implementation(libs.androidx.javascriptengine)
     implementation(libs.gson)
     implementation(libs.protobuf.javalite)

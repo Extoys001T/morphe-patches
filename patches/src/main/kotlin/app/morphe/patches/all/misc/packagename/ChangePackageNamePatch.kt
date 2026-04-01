@@ -82,16 +82,15 @@ fun setOrGetFallbackPackageName(fallbackPackageName: String): String {
 /**
  * Selectively changes usage of Context.getPackageName() to the original package name.
  */
-context(BytecodePatchContext)
-private fun applyGetPackageName(oldPackageName: String, vararg classesToChange: String) {
-    classDefForEach { classDef ->
+private fun applyGetPackageName(ctx: BytecodePatchContext, oldPackageName: String, vararg classesToChange: String) {
+    ctx.classDefForEach { classDef ->
         if (!classesToChange.any { classToChange ->
                 classDef.type.startsWith(classToChange)
             }
         ) return@classDefForEach
 
         val mutableClass by lazy {
-            mutableClassDefBy(classDef)
+            ctx.mutableClassDefBy(classDef)
         }
 
         classDef.methods.forEach { method ->
@@ -129,9 +128,8 @@ private fun applyGetPackageName(oldPackageName: String, vararg classesToChange: 
 }
 
 
-context(ResourcePatchContext)
-private fun applyProvidersStrings(oldPackageName: String, newPackageName: String) {
-    document("res/values/strings.xml").use { document ->
+private fun applyProvidersStrings(ctx: ResourcePatchContext, oldPackageName: String, newPackageName: String) {
+    ctx.document("res/values/strings.xml").use { document ->
         val children = document.documentElement.childNodes
         for (i in 0 until children.length) {
             val node = children.item(i) as? Element ?: continue
@@ -204,6 +202,7 @@ val changePackageNamePatch = resourcePatch(
                 when (val originalPackageName = packageMetadata.packageName) {
                     PACKAGE_NAME_REDDIT -> {
                         applyGetPackageName(
+                            this,
                             originalPackageName,
                             "Lcom/google/android/recaptcha/internal"
                         )
@@ -252,7 +251,7 @@ val changePackageNamePatch = resourcePatch(
         }
 
         if (applyUpdateProvidersStrings) {
-            applyProvidersStrings(packageName, newPackageName)
+            applyProvidersStrings(this, packageName, newPackageName)
         }
 
         document("AndroidManifest.xml").use { document ->
