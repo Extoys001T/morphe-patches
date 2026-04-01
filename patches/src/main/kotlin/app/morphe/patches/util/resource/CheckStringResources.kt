@@ -43,7 +43,7 @@ import javax.xml.parsers.DocumentBuilderFactory
 /**
  * Checks resource strings for invalid strings that will fail resource compilation.
  */
-fun main(args: Array<String>) {
+internal fun main(args: Array<String>) {
     var stringsChecked = 0
 
     val exceptions = mutableListOf<Exception>()
