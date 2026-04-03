@@ -517,12 +517,10 @@ val videoInformationPatch = bytecodePatch(
         }
 
         ChannelInformationFingerprint.let {
-            val matches = it.matchAll()
-            if (matches.count() !in 2 .. 3) throw PatchException("Unexpected number of matches: " + matches.count())
-
-            val channelIdMethodCall = ChannelIdFingerprint.getPlayerResponseInstruction()
+            val matches = it.matchAll(2 .. 3)
 
             matches.first().classDef.apply {
+                val channelIdMethodCall = ChannelIdFingerprint.getPlayerResponseInstruction()
                 methods.add(
                     ImmutableMethod(
                         type,

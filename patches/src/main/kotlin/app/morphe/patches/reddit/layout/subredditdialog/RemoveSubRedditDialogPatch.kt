@@ -61,10 +61,7 @@ val removeSubRedditDialogPatch = bytecodePatch(
             )
         }
 
-        NSFWAlertShowDialogFingerprint.matchAll(
-            // TODO: remove classDef parameter when patcher 1.3.3+ is released.
-            NSFWAlertDialogClassFingerprint.classDef
-        ).forEach { match ->
+        NSFWAlertShowDialogFingerprint.matchAll(2 .. 2).forEach { match ->
             match.let {
                 it.method.apply {
                     val index = it.instructionMatches.first().index
