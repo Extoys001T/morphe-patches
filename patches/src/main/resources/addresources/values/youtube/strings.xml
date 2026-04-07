@@ -917,8 +917,8 @@ To show the Audio track menu, change \'Spoof video streams\' to \'Android Reel\'
     <string name="morphe_hide_player_previous_next_buttons_summary_on">Previous &amp; Next buttons are hidden</string>
     <string name="morphe_hide_player_previous_next_buttons_summary_off">Previous &amp; Next buttons are shown</string>
 
-    <string name="morphe_quick_action_buttons_screen_title">Quick action buttons</string>
-    <string name="morphe_quick_action_buttons_screen_summary">Hide specific quick action buttons in the fullscreen player</string>
+    <string name="morphe_quick_actions_screen_title">Quick actions</string>
+    <string name="morphe_quick_actions_screen_summary">Hide or show quick actions related components</string>
     <string name="morphe_hide_quick_actions_ask_button_title">Hide Ask</string>
     <string name="morphe_hide_quick_actions_ask_button_summary_on">Ask button is hidden</string>
     <string name="morphe_hide_quick_actions_ask_button_summary_off">Ask button is shown</string>
@@ -937,9 +937,9 @@ To show the Audio track menu, change \'Spoof video streams\' to \'Android Reel\'
     <string name="morphe_hide_quick_actions_more_button_title">Hide More</string>
     <string name="morphe_hide_quick_actions_more_button_summary_on">More button is hidden</string>
     <string name="morphe_hide_quick_actions_more_button_summary_off">More button is shown</string>
-    <string name="morphe_hide_quick_actions_more_videos_button_title">Hide \'More videos\' button</string>
-    <string name="morphe_hide_quick_actions_more_videos_button_summary_on">More videos in quick actions are hidden</string>
-    <string name="morphe_hide_quick_actions_more_videos_button_summary_off">More videos in quick actions are shown</string>
+    <string name="morphe_hide_quick_actions_more_videos_button_title">Hide \'More videos\'</string>
+    <string name="morphe_hide_quick_actions_more_videos_button_summary_on">More videos button is hidden</string>
+    <string name="morphe_hide_quick_actions_more_videos_button_summary_off">More videos button is shown</string>
     <string name="morphe_hide_quick_actions_open_mix_playlist_button_title">Hide \'Open mix playlist\'</string>
     <string name="morphe_hide_quick_actions_open_mix_playlist_button_summary_on">Open mix playlist button is hidden</string>
     <string name="morphe_hide_quick_actions_open_mix_playlist_button_summary_off">Open mix playlist button is shown</string>
@@ -947,8 +947,8 @@ To show the Audio track menu, change \'Spoof video streams\' to \'Android Reel\'
     <string name="morphe_hide_quick_actions_open_playlist_button_summary_on">Open playlist button is hidden</string>
     <string name="morphe_hide_quick_actions_open_playlist_button_summary_off">Open playlist button is shown</string>
     <string name="morphe_hide_quick_actions_title">Hide quick actions</string>
-    <string name="morphe_hide_quick_actions_summary_on">Quick actions in fullscreen are hidden</string>
-    <string name="morphe_hide_quick_actions_summary_off">Quick actions in fullscreen  are shown</string>
+    <string name="morphe_hide_quick_actions_summary_on">Quick actions are hidden</string>
+    <string name="morphe_hide_quick_actions_summary_off">Quick actions are shown</string>
     <string name="morphe_hide_quick_actions_save_to_playlist_button_title">Hide \'Save to playlist\'</string>
     <string name="morphe_hide_quick_actions_save_to_playlist_button_summary_on">Save to playlist button is hidden</string>
     <string name="morphe_hide_quick_actions_save_to_playlist_button_summary_off">Save to playlist button is shown</string>

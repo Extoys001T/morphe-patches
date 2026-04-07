@@ -51,9 +51,8 @@ val hidePlayerOverlayButtonsPatch = bytecodePatch(
 
     execute {
         PreferenceScreen.PLAYER.addPreferences(
-            SwitchPreference("morphe_hide_quick_actions"),
             PreferenceScreenPreference(
-                key = "morphe_quick_action_buttons_screen",
+                key = "morphe_quick_actions_screen",
                 sorting = PreferenceScreenPreference.Sorting.UNSORTED,
                 preferences = setOf(
                     SwitchPreference("morphe_hide_quick_actions"),
