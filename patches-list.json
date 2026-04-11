@@ -1,5 +1,5 @@
 {
-  "version": "1.23.0-dev.6",
+  "version": "1.24.0-dev.4",
   "patches": [
     {
       "name": "Alternative thumbnails",
@@ -14,7 +14,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -34,7 +33,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -53,7 +51,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -91,7 +88,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -111,7 +107,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -132,7 +127,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -177,7 +171,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -292,7 +285,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -327,7 +319,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -348,7 +339,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -411,7 +401,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -477,7 +466,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -514,7 +502,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -559,7 +546,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -579,7 +565,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -599,7 +584,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -618,7 +602,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -637,7 +620,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -672,7 +654,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -691,7 +672,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -727,7 +707,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -747,7 +726,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -765,7 +743,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -785,7 +762,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -825,7 +801,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -882,7 +857,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -921,7 +895,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -963,7 +936,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1006,7 +978,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1077,7 +1048,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1097,7 +1067,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1154,7 +1123,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1172,7 +1140,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1193,7 +1160,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1221,7 +1187,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1270,12 +1235,15 @@
       "dependencies": [
         "BytecodePatch",
         "BytecodePatch",
+        "ResourcePatch",
+        "BytecodePatch",
+        "BytecodePatch",
+        "BytecodePatch",
         "BytecodePatch"
       ],
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1296,7 +1264,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1332,7 +1299,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1352,7 +1318,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1387,7 +1352,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1410,7 +1374,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1430,7 +1393,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1449,7 +1411,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1513,7 +1474,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1536,7 +1496,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1570,7 +1529,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1591,7 +1549,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1610,7 +1567,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1629,7 +1585,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1664,6 +1619,26 @@
       "options": []
     },
     {
+      "name": "Play all",
+      "description": "Adds an option to play all the videos from a channel and to display play all button in the video player.",
+      "use": true,
+      "dependencies": [
+        "BytecodePatch",
+        "BytecodePatch",
+        "ResourcePatch",
+        "BytecodePatch"
+      ],
+      "compatiblePackages": {
+        "com.google.android.youtube": [
+          "20.45.36",
+          "20.40.45",
+          "20.31.42",
+          "20.21.37"
+        ]
+      },
+      "options": []
+    },
+    {
       "name": "Playback speed",
       "description": "Adds options to customize available playback speeds, set a default playback speed, and show a speed dialog button in the video player.",
       "use": true,
@@ -1675,7 +1650,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1685,7 +1659,7 @@
     },
     {
       "name": "Reload video",
-      "description": "Adds options to display buttons in the video player to reload video.",
+      "description": "Adds an option to display reload video button in the video player.",
       "use": true,
       "dependencies": [
         "ResourcePatch",
@@ -1696,7 +1670,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1739,7 +1712,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1774,7 +1746,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1797,7 +1768,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1850,7 +1820,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1860,7 +1829,7 @@
     },
     {
       "name": "Seekbar",
-      "description": "Adds options to disable precise seeking when swiping up on the seekbar, slide to seek instead of playing at 2x speed when pressing and holding, tapping the player seekbar to seek, hiding the video player seekbar, and enabling seeking in livestreams.",
+      "description": "Adds options to disable precise seeking when swiping up on the seekbar, slide to seek instead of playing at 2x speed when pressing and holding, tapping the player seekbar to seek, hiding the video player seekbar, enabling seeking in livestreams, and expanding the livestream DVR duration.",
       "use": true,
       "dependencies": [
         "BytecodePatch",
@@ -1872,7 +1841,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1893,7 +1861,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1934,7 +1901,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1956,7 +1922,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -1975,7 +1940,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -2035,7 +1999,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -2055,7 +2018,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -2122,7 +2084,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -2188,7 +2149,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"
@@ -2210,7 +2170,6 @@
       "compatiblePackages": {
         "com.google.android.youtube": [
           "20.45.36",
-          "20.44.38",
           "20.40.45",
           "20.31.42",
           "20.21.37"

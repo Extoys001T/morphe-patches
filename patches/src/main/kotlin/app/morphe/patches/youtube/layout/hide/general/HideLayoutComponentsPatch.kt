@@ -33,8 +33,8 @@ import app.morphe.patches.youtube.layout.hide.updatescreen.hideUpdateScreenPatch
 import app.morphe.patches.youtube.misc.engagement.engagementPanelHookPatch
 import app.morphe.patches.youtube.misc.litho.filter.addLithoFilter
 import app.morphe.patches.youtube.misc.litho.filter.lithoFilterPatch
-import app.morphe.patches.youtube.misc.litho.lazily.hookTreeNodeResult
-import app.morphe.patches.youtube.misc.litho.lazily.lazilyConvertedElementHookPatch
+import app.morphe.patches.youtube.misc.litho.node.hookTreeNodeResult
+import app.morphe.patches.youtube.misc.litho.node.treeNodeElementHookPatch
 import app.morphe.patches.youtube.misc.navigation.navigationBarHookPatch
 import app.morphe.patches.youtube.misc.playservice.is_20_21_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_21_11_or_greater
@@ -90,7 +90,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
         hideUpdateScreenPatch,
         elementProtoParserHookPatch,
         fixProtoLibraryPatch,
-        lazilyConvertedElementHookPatch
+        treeNodeElementHookPatch
     )
 
     compatibleWith(COMPATIBILITY_YOUTUBE)
@@ -255,6 +255,7 @@ val hideLayoutComponentsPatch = bytecodePatch(
             SwitchPreference("morphe_hide_movies_section"),
             SwitchPreference("morphe_hide_notify_me_button"),
             SwitchPreference("morphe_hide_playables"),
+            SwitchPreference("morphe_hide_search_term_thumbnails"),
             SwitchPreference("morphe_hide_show_more_button"),
             SwitchPreference("morphe_hide_subscribed_channels_bar"),
             SwitchPreference("morphe_hide_surveys"),
@@ -765,15 +766,38 @@ val hideLayoutComponentsPatch = bytecodePatch(
                 addInstructionsWithLabels(
                     objectIndex + 1,
                     """
-                invoke-static { v${objectInstruction.registerA} }, $LAYOUT_COMPONENTS_FILTER_CLASS_DESCRIPTOR->hideChannelTab(Ljava/lang/String;)Z
-                move-result v${objectInstruction.registerA}
-                if-eqz v${objectInstruction.registerA}, :ignore
-                invoke-interface { v$iteratorRegister }, Ljava/util/Iterator;->remove()V
-                goto :next_iterator
-                :ignore
-                iget-object v${objectInstruction.registerA}, v${objectInstruction.registerB}, $objectReference
-                """,
+                        invoke-static { v${objectInstruction.registerA} }, $LAYOUT_COMPONENTS_FILTER_CLASS_DESCRIPTOR->hideChannelTab(Ljava/lang/String;)Z
+                        move-result v${objectInstruction.registerA}
+                        if-eqz v${objectInstruction.registerA}, :ignore
+                        invoke-interface { v$iteratorRegister }, Ljava/util/Iterator;->remove()V
+                        goto :next_iterator
+                        :ignore
+                        iget-object v${objectInstruction.registerA}, v${objectInstruction.registerB}, $objectReference
+                    """,
                     ExternalLabel("next_iterator", getInstruction(iteratorIndex))
+                )
+            }
+        }
+
+        // endregion
+
+        // region hide search term thumbnails
+
+        CreateSearchSuggestionsFingerprint.let {
+            it.method.apply {
+                val insertIndex = it.instructionMatches[2].index - 1
+                val freeRegister = findFreeRegister(insertIndex)
+                val jumpIndex = it.instructionMatches.last().index
+
+                addInstructionsWithLabels(
+                    insertIndex,
+                    """
+                        invoke-static { }, $LAYOUT_COMPONENTS_FILTER_CLASS_DESCRIPTOR->hideSearchTermThumbnails()Z
+                        move-result v$freeRegister
+                        
+                        if-nez v$freeRegister, :hidden
+                    """,
+                    ExternalLabel("hidden", getInstruction(jumpIndex))
                 )
             }
         }

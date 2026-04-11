@@ -121,6 +121,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">Απόκρυψη \"Παιχνίδια YouTube\"</string>
   <string name="morphe_hide_playables_summary_on">Τα \"Παιχνίδια YouTube\" έχουν αποκρυφτεί</string>
   <string name="morphe_hide_playables_summary_off">Τα \"Παιχνίδια YouTube\" εμφανίζονται</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Κρύψτε τις μικρογραφίες των όρων αναζήτησης</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Οι μικρογραφίες των όρων αναζήτησης είναι κρυμμένες</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Οι μικρογραφίες των όρων αναζήτησης εμφανίζονται</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Απόκρυψη κουμπιού \"Εμφάνιση περισσότερων\" στα αποτελέσματα αναζήτησης</string>
@@ -501,6 +504,25 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_button_summary_off">Εμφανίζεται</string>
   <string name="morphe_loop_video_button_toast_on">Η επανάληψη βίντεο είναι ενεργοποιημένη</string>
   <string name="morphe_loop_video_button_toast_off">Η επανάληψη βίντεο είναι απενεργοποιημένη</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Εμφάνιση κουμπιού αναπαραγωγής όλων</string>
+  <string name="morphe_play_all_button_summary_on">"Εμφανίζεται το κουμπί αναπαραγωγής όλων.\nΠατήστε για να δημιουργήσετε μια λίστα αναπαραγωγής με όλα τα βίντεο από το κανάλι.\nΠατήστε και κρατήστε πατημένο για να αναιρέσετε.\n\nΠληροφορίες: Ίσως να μην λειτουργεί σε ζωντανές μεταδόσεις"</string>
+  <string name="morphe_play_all_button_summary_off">Δεν εμφανίζεται το κουμπί αναπαραγωγής όλων</string>
+  <string name="morphe_play_all_button_type_title">Λειτουργία δημιουργίας λίστας αναπαραγωγής</string>
+  <string name="morphe_play_all_button_type_entry_0">Όλα τα περιεχόμενα (Ταξινόμηση κατά χρόνο, Αυξανόμενη σειρά)</string>
+  <string name="morphe_play_all_button_type_entry_1">Όλα τα περιεχόμενα (Ταξινόμηση κατά χρόνο)</string>
+  <string name="morphe_play_all_button_type_entry_2">Όλα τα περιεχόμενα (Ταξινόμηση κατά δημοτικότητα)</string>
+  <string name="morphe_play_all_button_type_entry_3">Μόνο βίντεο (Ταξινόμηση κατά χρόνο)</string>
+  <string name="morphe_play_all_button_type_entry_4">Μόνο βίντεο (Ταξινόμηση κατά δημοτικότητα)</string>
+  <string name="morphe_play_all_button_type_entry_5">Μόνο Shorts (Ταξινόμηση κατά χρόνο)</string>
+  <string name="morphe_play_all_button_type_entry_6">Μόνο Shorts (Ταξινόμηση κατά δημοτικότητα)</string>
+  <string name="morphe_play_all_button_type_entry_7">Μόνο μεταδιδόμενα βίντεο (Ταξινόμηση κατά χρόνο)</string>
+  <string name="morphe_play_all_button_type_entry_8">Μόνο μεταδιδόμενα βίντεο (Ταξινόμηση κατά δημοτικότητα)</string>
+  <string name="morphe_play_all_button_type_entry_9">Μόνο περιεχόμενο μελών</string>
+  <string name="morphe_play_all_button_type_entry_10">Μόνο βίντεο μελών</string>
+  <string name="morphe_play_all_button_type_entry_11">Μόνο Shorts μελών</string>
+  <string name="morphe_play_all_button_type_entry_12">Μόνο ζωντανές μεταδόσεις μελών</string>
+  <string name="morphe_play_all_button_not_available_toast">Δεν ήταν δυνατή η δημιουργία λίστας αναπαραγωγής λόγω ασυμφωνίας αναγνωριστικού καναλιού</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Εμφάνιση κουμπιού επανεξέτασης βίντεο</string>
   <string name="morphe_reload_video_summary_on">Εμφανίζεται το κουμπί επανεξέτασης βίντεο</string>
@@ -514,6 +536,8 @@ Second \"item\" text"</string>
   <string name="morphe_livestream_dvr_title">Ενεργοποίηση εγγραφής ζωντανής μετάδοσης DVR</string>
   <string name="morphe_livestream_dvr_summary_on">Η αναζήτηση επιτρέπεται σε όλες τις ζωντανές μεταδόσεις</string>
   <string name="morphe_livestream_dvr_summary_off">Η αναζήτηση ενδέχεται να μην είναι διαθέσιμη στις ζωντανές μεταδόσεις</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Η ενεργοποίηση αυτής της δυνατότητας ενδέχεται να προκαλέσει απρόσμενη συμπεριφορά αναζήτησης ζωντανής ροής, εάν δεν είναι ενεργοποιημένη η επιλογή \'Spoof video streams\'.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Χειρονομία συρσίματος για αναζήτηση</string>
   <string name="morphe_slide_to_seek_summary_on">Η χειρονομία συρσίματος για αναζήτηση στη γραμμή προόδου είναι ενεργοποιημένη</string>
@@ -769,6 +793,12 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_captions_title">Μενού «Υπότιτλοι»</string>
   <string name="morphe_hide_player_flyout_captions_summary_on">Κρυμμένο</string>
   <string name="morphe_hide_player_flyout_captions_summary_off">Εμφανίζεται</string>
+  <string name="morphe_hide_player_flyout_captions_footer_title">Απόκρυψη υποτίτλων</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_on">Κρυμμένο</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_off">Εμφανίζεται</string>
+  <string name="morphe_hide_player_flyout_captions_header_title">Απόκρυψη υποτίτλων</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_on">Κρυμμένο</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_off">Εμφανίζεται</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_additional_settings_title">Κρύψε Μενού «Πρόσθετες ρυθμίσεις»</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_on">Το μενού «Πρόσθετες ρυθμίσεις» είναι κρυμμένο</string>
@@ -814,17 +844,23 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Μενού κομματιών ήχου είναι κρυμμένο
 
 Για να δείτε το μενού κομματιών ήχου, αλλάξτε 'Spoof video streams' σε 'Android Reel' ή 'TV'"</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_title">Μενού «Κομμάτι ήχου»</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_on">Κρυμμένο</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_off">Εμφανίζεται</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Μενού «Προβολή σε VR»</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Κρυμμένο</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_off">Εμφανίζεται</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_video_quality_title">Κρύψε Μενού «Ποιότητα»</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_on">Το μενού «Ποιότητα» είναι κρυμμένο</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_off">Το μενού «Ποιότητα» εμφανίζεται</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_title">Κρύψε Οδηγίες του μενού ποιότητας βίντεο</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">Οι οδηγίες του μενού ποιότητας βίντεο είναι κρυμμένες</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">Οι οδηγίες του μενού ποιότητας βίντεο εμφανίζονται</string>
+  <string name="morphe_hide_player_flyout_quality_title">Ποιότητα</string>
+  <string name="morphe_hide_player_flyout_quality_summary_on">Κρυμμένο</string>
+  <string name="morphe_hide_player_flyout_quality_summary_off">Εμφανίζεται</string>
+  <string name="morphe_hide_player_flyout_quality_footer_title">Οδηγίες του μενού ποιότητας βίντεο</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_on">Κρυμμένες</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_off">Εμφανίζονται</string>
+  <string name="morphe_hide_player_flyout_quality_header_title">Ποιότητα</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_on">Κρυμμένες</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_off">Εμφανίζονται</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Απόκρυψη προεπισκόπισης αυτόματης αναπαραγωγής</string>
   <string name="morphe_hide_autoplay_preview_summary_on">Η προεπισκόπιση αυτόματης αναπαραγωγής είναι απόκρυφη</string>
@@ -1622,7 +1658,13 @@ Second \"item\" text"</string>
 • Τα βίντεο HDR δεν θα χρησιμοποιούν τον κωδικοποιητή AVC
 • Ορισμένες συσκευές δεν μπορούν να επιβάλλουν τον κωδικοποιητή AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
-  <string name="morphe_force_avc_codec_not_available">Για να χρησιμοποιήσετε αυτήν τη λειτουργία, αλλάξτε το \"Παραποίηση ροών βίντεο\" σε Android VR ή Android Studio</string>
+  <string name="morphe_force_avc_codec_not_available">Για να χρησιμοποιήσετε αυτήν τη λειτουργία, αλλάξτε τη \"Παραποίηση ροών βίντεο\" σε Android VR ή Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Επέκταση της διάρκειας του DVR της ζωντανής μετάδοσης</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Η διάρκεια του DVR της ζωντανής μετάδοσης έχει επεκταθεί έως και 7 ημέρες</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Η διάρκεια του DVR της ζωντανής μετάδοσης περιορίζεται στην προεπιλογή του διακομιστή</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Αυτή η ρύθμιση ενδέχεται να προκαλέσει απρόβλεπτη συμπεριφορά εάν δεν είναι ενεργοποιημένη η επιλογή \'Spoof video streams\'.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Εμφάνιση προχωρημένου μενού ποιότητας βίντεο</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Εμφανίζεται το προχωρημένο μενού ποιότητας βίντεο</string>

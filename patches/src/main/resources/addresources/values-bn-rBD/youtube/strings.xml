@@ -119,6 +119,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">খেলার উপযুক্ত লুকান</string>
   <string name="morphe_hide_playables_summary_on">খেলার উপযুক্ত লুকিয়ে রয়েছে</string>
   <string name="morphe_hide_playables_summary_off">খেলার উপযুক্ত প্রদর্শিত হয়েছে</string>
+  <string name="morphe_hide_search_term_thumbnails_title">অনুসন্ধান শর্তাবলীর থাম্বনেইল লুকানো</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">অনুসন্ধান শর্তাবলীর থাম্বনেইল লুকানো হয়েছে</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">অনুসন্ধান শর্তাবলীর থাম্বনেইল দেখানো হচ্ছে</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">\'আরও দেখান\' বোতাম লুকান</string>
@@ -499,6 +502,29 @@ YouTube Doodles দেখানো কাস্টম হেডার প্র�
   <string name="morphe_loop_video_button_summary_off">ভিডিও লুপ করুন মেনু প্রদর্শিত হয়েছে</string>
   <string name="morphe_loop_video_button_toast_on">লুপ ভিডিও চালু আছে</string>
   <string name="morphe_loop_video_button_toast_off">লুপ ভিডিও বন্ধ আছে</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">খেলুন সব বোতাম দেখান</string>
+  <string name="morphe_play_all_button_summary_on">"খেলুন সব বোতাম দেখানো হচ্ছে
+চ্যানেলের সমস্ত ভিডিওর প্লেলিস্ট তৈরি করতে ট্যাপ করুন
+আনডু করতে লং প্রেস করুন
+
+তথ্য: লাইভ স্ট্রিমে এটি কাজ নাও করতে পারে"</string>
+  <string name="morphe_play_all_button_summary_off">খেলুন সব বোতাম দেখানো হয়নি</string>
+  <string name="morphe_play_all_button_type_title">প্লেলিস্ট তৈরি মোড</string>
+  <string name="morphe_play_all_button_type_entry_0">সমস্ত কনটেন্ট (সময় অনুসারে সাজানো, ঊর্ধ্বমুখী)</string>
+  <string name="morphe_play_all_button_type_entry_1">সমস্ত কনটেন্ট (সময় অনুসারে সাজানো)</string>
+  <string name="morphe_play_all_button_type_entry_2">সমস্ত কনটেন্ট (জনপ্রিয়তা অনুসারে সাজানো)</string>
+  <string name="morphe_play_all_button_type_entry_3">ভিডিওগুলি மட்டும் (সময় অনুসারে সাজানো)</string>
+  <string name="morphe_play_all_button_type_entry_4">ভিডিওগুলি மட்டும் (জনপ্রিয়তা অনুসারে সাজানো)</string>
+  <string name="morphe_play_all_button_type_entry_5">শর্টসগুলি மட்டும் (সময় অনুসারে সাজানো)</string>
+  <string name="morphe_play_all_button_type_entry_6">শর্টসগুলি மட்டும் (জনপ্রিয়তা অনুসারে সাজানো)</string>
+  <string name="morphe_play_all_button_type_entry_7">স্ট্রিমিং ভিডিওগুলি மட்டும் (সময় অনুসারে সাজানো)</string>
+  <string name="morphe_play_all_button_type_entry_8">স্ট্রিমিং ভিডিওগুলি மட்டும் (জনপ্রিয়তা অনুসারে সাজানো)</string>
+  <string name="morphe_play_all_button_type_entry_9">শুধুমাত্র সকল সদস্যদের কনটেন্ট</string>
+  <string name="morphe_play_all_button_type_entry_10">সদস্যদের জন্য ভিডিও</string>
+  <string name="morphe_play_all_button_type_entry_11">সদস্যদের জন্য শর্টস</string>
+  <string name="morphe_play_all_button_type_entry_12">সদস্যদের জন্য লাইভ স্ট্রীম</string>
+  <string name="morphe_play_all_button_not_available_toast">চ্যানেল আইডি না মিলப்பதால் প্লেলিস্ট তৈরি করা যায়নি</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">পুনরায় লোড ভিডিও বোতাম দেখান</string>
   <string name="morphe_reload_video_summary_on">পুনরায় লোড ভিডিও বোতামটি দেখানো হয়েছে</string>
@@ -512,6 +538,8 @@ YouTube Doodles দেখানো কাস্টম হেডার প্র�
   <string name="morphe_livestream_dvr_title">লাইভস্ট্রিম ডিভিআর সক্রিয় করুন</string>
   <string name="morphe_livestream_dvr_summary_on">সব লাইভস্ট্রিমেই খোঁজা যাবে</string>
   <string name="morphe_livestream_dvr_summary_off">লাইভস্ট্রিমগুলোতে খোঁজা নাও যেতে পারে</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">এটি সক্রিয় করলে \'Spoof ভিডিও স্ট্রিম\' সক্রিয় না থাকলে অপ্রত্যাশিত লাইভস্ট্রিম খোঁজার ঘটনা ঘটতে পারে।</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">ভিডিওর নির্দিষ্ট অংশে যেতে টানুন সক্রিয় করুন</string>
   <string name="morphe_slide_to_seek_summary_on">ভিডিওর নির্দিষ্ট অংশে যেতে টানুন সক্রিয় করা হয়েছে</string>
@@ -762,11 +790,17 @@ YouTube সেটিংস খুলতে ট্যাপ এবং ধরে �
 YouTube সেটিংস খুলতে ট্যাপ এবং ধরে রাখুন"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">ফ্লাইআউট মেনু</string>
-  <string name="morphe_hide_player_flyout_summary">ফ্লাইআউট মেনুর আইটেম দেখান বা লুকান</string>
+  <string name="morphe_hide_player_flyout_summary">প্লেয়ার ফ্লাইআউট মেনু কম্পোনেন্ট লুকান বা দেখান</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">ক্যাপশন লুকান</string>
   <string name="morphe_hide_player_flyout_captions_summary_on">ক্যাপশন মেনু লুকিয়ে রয়েছে</string>
   <string name="morphe_hide_player_flyout_captions_summary_off">ক্যাপশন মেনু প্রদর্শিত হয়েছে</string>
+  <string name="morphe_hide_player_flyout_captions_footer_title">ক্যাপশন ফুটার লুকান</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_on">ক্যাপশন মেনু ফুটার লুকানো আছে</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_off">ক্যাপশন মেনু ফুটার দেখানো হয়েছে</string>
+  <string name="morphe_hide_player_flyout_captions_header_title">ক্যাপশন হেডার লুকান</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_on">ক্যাপশন মেনু লুকানো রয়েছে</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_off">ক্যাপশন মেনু প্রদর্শিত হয়েছে</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_additional_settings_title">আরও সেটিংস দেখুন লুকান</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_on">আরও সেটিংস দেখুন মেনু লুকিয়ে রয়েছে</string>
@@ -812,17 +846,23 @@ YouTube সেটিংস খুলতে ট্যাপ এবং ধরে �
   <string name="morphe_hide_player_flyout_audio_track_not_available">"ওডিও ট্র্যাক মেন্যু লুকানো আছে
 
 ওডিও ট্র্যাক মেন্যু দেখানোর জন্য, 'স্ক্যাম ভিডিও স্ট্রিম' কে 'এন্ড্রয়েড রিল' বা 'টিভি' এ পরিবর্তন করুন।"</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_title">অডিও ট্র্যাক লুকান</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_on">অডিও ট্র্যাক মেনু লুকানো আছে</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_off">অডিও ট্র্যাক মেনু দেখানো হয়</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">ভিআর-এ ঘড়ি লুকান</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">ভিআর মেনুতে দেখুন লুকানো আছে</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_off">ভিআর মেনুতে দেখুন দেখানো হয়েছে</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_video_quality_title">ভিডিও গুণমান মেনু লুকান</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_on">ভিডিও মানের মেনু লুকানো আছে</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_off">ভিডিও মানের মেনু দেখানো হয়েছে</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_title">ভিডিও গুণমান মেনুর ফুটার লুকান</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">ভিডিও গুণমান মেনু ফুটার লুকানো আছে</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">ভিডিও গুণমান মেনু ফুটার দেখানো হচ্ছে</string>
+  <string name="morphe_hide_player_flyout_quality_title">গুণমান লুকান</string>
+  <string name="morphe_hide_player_flyout_quality_summary_on">ভিডিও মানের মেনু লুকানো আছে</string>
+  <string name="morphe_hide_player_flyout_quality_summary_off">ভিডিও মানের মেনু দেখানো হয়েছে</string>
+  <string name="morphe_hide_player_flyout_quality_footer_title">ভিডিও গুণমান মেনুর ফুটার লুকান</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_on">ভিডিও গুণমান মেনু ফুটার লুকানো আছে</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_off">ভিডিও গুণমান মেনু ফুটার দেখানো হচ্ছে</string>
+  <string name="morphe_hide_player_flyout_quality_header_title">গুণমান লুকান</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_on">ভিডিও গুণমান মেনু ফুটার লুকানো আছে</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_off">ভিডিও গুণমান মেনু ফুটার দেখানো হচ্ছে</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">অটোপ্লে প্রিভিউ লুকান</string>
   <string name="morphe_hide_autoplay_preview_summary_on">অটোপ্লে প্রিভিউ লুকানো আছে</string>
@@ -1624,6 +1664,12 @@ DeArrow সম্পর্কে আরও জানতে এখানে ট�
 • কিছু ডিভাইস AVC জোর করে ব্যবহার করতে পারে না"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">এই বৈশিষ্ট্যটি ব্যবহার করতে, \'Spoof ভিডিও স্ট্রিম\' অ্যান্ড্রয়েড VR অথবা অ্যান্ড্রয়েড স্টুডিওতে পরিবর্তন করুন</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">লাইভস্ট্রিম ডিভিআর সময়কাল বাড়ান</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">লাইভস্ট্রিম ডিভিআর সময়কাল ৭ দিন পর্যন্ত বাড়ানো হয়েছে</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">লাইভস্ট্রিম ডিভিআর সময়কাল সার্ভারের ডিফল্টে সীমাবদ্ধ</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">যদি \'স্পুফ ভিডিও স্ট্রিম\' সক্রিয় করা না হয় তবে এই সেটিংসের কারণে অপ্রত্যাশিত আচরণ হতে পারে।</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">উন্নত ভিডিও গুণমান মেনু দেখান</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">উন্নত ভিডিও গুণমান মেনু দেখানো হয়েছে</string>

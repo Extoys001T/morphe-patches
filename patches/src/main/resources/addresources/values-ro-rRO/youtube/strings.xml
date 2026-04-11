@@ -120,6 +120,9 @@ Schimbari incluse:
   <string name="morphe_hide_playables_title">Ascunde Playables</string>
   <string name="morphe_hide_playables_summary_on">Playables sunt ascunse</string>
   <string name="morphe_hide_playables_summary_off">Playables sunt afișate</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Ascunde miniaturile termenilor de căutare</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Miniaturile termenilor de căutare sunt ascunse</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Miniaturile termenilor de căutare sunt afișate</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Ascunderea butonului „Afișează mai multe”</string>
@@ -496,6 +499,25 @@ Verificați dacă numele pachetului este corect și dacă aplicația este instal
   <string name="morphe_loop_video_button_summary_off">Meniu cu buclă video nu este afișat</string>
   <string name="morphe_loop_video_button_toast_on">Bucla video este activată</string>
   <string name="morphe_loop_video_button_toast_off">Bucla video este dezactivată</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Arată butonul de redare a tuturor</string>
+  <string name="morphe_play_all_button_summary_on">"Butonul de redare a tuturor este afișat\nApăsați pentru a genera o listă de redare cu toate videoclipurile din canal\nApăsați și țineți apăsat pentru a anula\n\nInformații: Este posibil să nu funcționeze pe fluxurile live"</string>
+  <string name="morphe_play_all_button_summary_off">Butonul de redare a tuturor nu este afișat</string>
+  <string name="morphe_play_all_button_type_title">Mod generare listă de redare</string>
+  <string name="morphe_play_all_button_type_entry_0">Toate conținuturile (Sortare după timp, Ascendent)</string>
+  <string name="morphe_play_all_button_type_entry_1">Toate conținuturile (Sortare după timp)</string>
+  <string name="morphe_play_all_button_type_entry_2">Toate conținuturile (Sortare după popularitate)</string>
+  <string name="morphe_play_all_button_type_entry_3">Doar videoclipuri (Sortare după timp)</string>
+  <string name="morphe_play_all_button_type_entry_4">Doar videoclipuri (Sortare după popularitate)</string>
+  <string name="morphe_play_all_button_type_entry_5">Doar Shorts (Sortare după timp)</string>
+  <string name="morphe_play_all_button_type_entry_6">Doar Shorts (Sortare după popularitate)</string>
+  <string name="morphe_play_all_button_type_entry_7">Doar videoclipuri transmise în direct (Sortare după timp)</string>
+  <string name="morphe_play_all_button_type_entry_8">Doar videoclipuri transmise în direct (Sortare după popularitate)</string>
+  <string name="morphe_play_all_button_type_entry_9">Doar conținut de la toți membrii</string>
+  <string name="morphe_play_all_button_type_entry_10">Doar videoclipuri pentru membri</string>
+  <string name="morphe_play_all_button_type_entry_11">Doar Shorts pentru membri</string>
+  <string name="morphe_play_all_button_type_entry_12">Doar transmisiuni în direct pentru membri</string>
+  <string name="morphe_play_all_button_not_available_toast">Nu s-a putut genera playlist-ul din cauza nepotrivirii ID-ului canalului</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Afișează butonul de reîncărcare video</string>
   <string name="morphe_reload_video_summary_on">Butonul de reîncărcare video este afișat</string>
@@ -509,6 +531,8 @@ Verificați dacă numele pachetului este corect și dacă aplicația este instal
   <string name="morphe_livestream_dvr_title">Activare DVR livestream</string>
   <string name="morphe_livestream_dvr_summary_on">Căutarea este permisă la toate livestream-urile</string>
   <string name="morphe_livestream_dvr_summary_off">Căutarea poate să nu fie disponibilă la livestream-uri</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Activarea acesteia poate provoca o comportare neașteptată a căutării transmisiunilor live dacă \"Simulează fluxuri video\" nu este activat.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Activează diapozitivul pentru a căuta</string>
   <string name="morphe_slide_to_seek_summary_on">Slide pentru căutare este activat</string>
@@ -759,11 +783,17 @@ Apasă și menține apăsat pentru a deschide setările YouTube"</string>
 Apasă și menține apăsat pentru a deschide setările Morphe"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Meniu flyout</string>
-  <string name="morphe_hide_player_flyout_summary">Ascunde sau arată elementele de meniu Flyout ale jucătorului</string>
+  <string name="morphe_hide_player_flyout_summary">Ascunderea sau afișarea componentelor meniului Flyout al jucătorului</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ascunde subtitrările</string>
   <string name="morphe_hide_player_flyout_captions_summary_on">Meniul subtitrărilor este ascuns</string>
   <string name="morphe_hide_player_flyout_captions_summary_off">Meniul de subtitrări este afișat</string>
+  <string name="morphe_hide_player_flyout_captions_footer_title">Ascunderea antetului Subtitrări</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_on">Meniul subtitrărilor este ascuns</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_off">Meniul de subtitrări este afișat</string>
+  <string name="morphe_hide_player_flyout_captions_header_title">Ascunderea antetului Subtitrări</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_on">Meniul subtitrărilor este ascuns</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_off">Meniul de subtitrări este afișat</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_additional_settings_title">Ascunde \'Setări adiționale / Mai multe\'</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_on">Meniu setări adiționale este ascuns</string>
@@ -809,17 +839,23 @@ Apasă și menține apăsat pentru a deschide setările Morphe"</string>
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Meniu de track-uri audio este ascuns
 
 Pentru a afișa meniul de track-uri audio, schimba 'Spoof video streams' în 'Android Reel' sau 'TV'"</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_title">Ascunde piesa audio</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_on">Meniul piesei audio este ascuns</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_off">Meniul piesei audio este afișat</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Ascunde ceas în VR</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Vizionarea în meniul VR este ascunsă</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_off">Vizionați în meniul VR este afișat</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_video_quality_title">Ascunde meniul de calitate video</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_on">Meniu calitate video este ascuns</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_off">Meniu calitate video este afișat</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_title">Ascunde subsol meniu calitate video</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">Subsol meniu calitate video este ascuns</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">Subsol meniu calitate video este afișat</string>
+  <string name="morphe_hide_player_flyout_quality_title">Ascunde Calitate</string>
+  <string name="morphe_hide_player_flyout_quality_summary_on">Meniul calității video este ascuns</string>
+  <string name="morphe_hide_player_flyout_quality_summary_off">Meniul calității video este afișat</string>
+  <string name="morphe_hide_player_flyout_quality_footer_title">Ascunde subsol meniu calitate video</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_on">Subsolul meniului calităţii video este ascuns</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_off">Subsolul meniului calității video este afișat</string>
+  <string name="morphe_hide_player_flyout_quality_header_title">Ascunde Calitate</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_on">Subsolul meniului calităţii video este ascuns</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_off">Subsolul meniului calității video este afișat</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Ascunde previzualizarea autoplay</string>
   <string name="morphe_hide_autoplay_preview_summary_on">Previzualizarea autoplay este ascunsă</string>
@@ -1620,6 +1656,12 @@ Limitări:
 • Unele dispozitive nu pot forța AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Pentru a utiliza această funcție, modificați \"Falsificare fluxuri video\" la Android VR sau Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Extinde durata DVR pentru livestream</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Durata DVR pentru livestream este extinsă până la 7 zile</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Durata DVR pentru livestream este limitată la setarea implicită a serverului</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Această setare poate provoca un comportament neașteptat dacă \'Simulează fluxuri video\' nu este activat.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Afișează meniul avansat de calitate video</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Se afișează meniul avansat de calitate video</string>

@@ -119,6 +119,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">إخفاء هيّا نلعب</string>
   <string name="morphe_hide_playables_summary_on">تم إخفاء هيّا نلعب</string>
   <string name="morphe_hide_playables_summary_off">يتم عرض هيّا نلعب</string>
+  <string name="morphe_hide_search_term_thumbnails_title">إخفاء مصغرات مصطلحات البحث</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">تم إخفاء مصغرات مصطلحات البحث</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">يتم عرض مصغرات مصطلحات البحث</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">إخفاء زر \'عرض المزيد\'</string>
@@ -499,6 +502,25 @@ Second \"item\" text"</string>
   <string name="morphe_loop_video_button_summary_off">لا يتم عرض زر تكرار الفيديو</string>
   <string name="morphe_loop_video_button_toast_on">تكرار الفيديو قيد التشغيل</string>
   <string name="morphe_loop_video_button_toast_off">تكرار الفيديو متوقف</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">عرض زر تشغيل الكل</string>
+  <string name="morphe_play_all_button_summary_on">"يتم عرض زر تشغيل الكل\nاضغط لإنشاء قائمة تشغيل لجميع فيديوهات القناة\nاضغط مع الاستمرار للتراجع\n\nمعلومة: قد لا يعمل على البث المباشر"</string>
+  <string name="morphe_play_all_button_summary_off">لا يتم عرض زر تشغيل الكل</string>
+  <string name="morphe_play_all_button_type_title">وضع إنشاء قائمة تشغيل</string>
+  <string name="morphe_play_all_button_type_entry_0">كل المحتوى (فرز حسب الوقت، تصاعدي)</string>
+  <string name="morphe_play_all_button_type_entry_1">كل المحتوى (فرز حسب الوقت)</string>
+  <string name="morphe_play_all_button_type_entry_2">كل المحتوى (فرز حسب الأكثر شيوعًا)</string>
+  <string name="morphe_play_all_button_type_entry_3">الفيديوهات فقط (فرز حسب الوقت)</string>
+  <string name="morphe_play_all_button_type_entry_4">الفيديوهات فقط (فرز حسب الأكثر شيوعًا)</string>
+  <string name="morphe_play_all_button_type_entry_5">Shorts فقط (فرز حسب الوقت)</string>
+  <string name="morphe_play_all_button_type_entry_6">Shorts فقط (فرز حسب الأكثر شيوعًا)</string>
+  <string name="morphe_play_all_button_type_entry_7">الفيديوهات التي تم بثها فقط (فرز حسب الوقت)</string>
+  <string name="morphe_play_all_button_type_entry_8">الفيديوهات التي تم بثها فقط (فرز حسب الأكثر شيوعًا)</string>
+  <string name="morphe_play_all_button_type_entry_9">محتوى الأعضاء فقط</string>
+  <string name="morphe_play_all_button_type_entry_10">فيديوهات الأعضاء فقط</string>
+  <string name="morphe_play_all_button_type_entry_11">Shorts الأعضاء فقط</string>
+  <string name="morphe_play_all_button_type_entry_12">بث مباشر للأعضاء فقط</string>
+  <string name="morphe_play_all_button_not_available_toast">تعذر إنشاء قائمة تشغيل بسبب عدم تطابق معرّف القناة</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">عرض زر إعادة تحميل الفيديو</string>
   <string name="morphe_reload_video_summary_on">يتم عرض زر إعادة تحميل الفيديو</string>
@@ -509,9 +531,11 @@ Second \"item\" text"</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_on">تم تعطيل إيماءة التمرير الدقيقة</string>
   <string name="morphe_disable_precise_seeking_gesture_summary_off">تم تمكين إيماءة التمرير الدقيقة</string>
   <!-- interaction.seekbar.livestreamDvrPatch -->
-  <string name="morphe_livestream_dvr_title">تمكين تسجيل الفيديو المباشر</string>
-  <string name="morphe_livestream_dvr_summary_on">يُسمح بالبحث في جميع البثوث المباشرة</string>
-  <string name="morphe_livestream_dvr_summary_off">قد لا يكون البحث متاحًا في البثوث المباشرة</string>
+  <string name="morphe_livestream_dvr_title">تمكين التنقل في البث المباشر</string>
+  <string name="morphe_livestream_dvr_summary_on">يُسمح بالتقديم والتأخير في جميع البثوث المباشرة</string>
+  <string name="morphe_livestream_dvr_summary_off">قد لا يكون التقديم والتأخير متاحًا في البثوث المباشرة</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">تمكين هذا قد يتسبب في سلوك غير متوقع أثناء التنقل في البث المباشر إذا لم يتم تمكين \'Spoof Video Streams\'.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">تمكين التمرير للتقديم أو الترجيع</string>
   <string name="morphe_slide_to_seek_summary_on">تم تمكين التمرير للتقديم أو الترجيع</string>
@@ -763,11 +787,17 @@ Second \"item\" text"</string>
 اضغط مع الاستمرار لفتح إعدادات Morphe"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">القائمة المنبثقة</string>
-  <string name="morphe_hide_player_flyout_summary">إخفاء أو عرض عناصر قائمة المشغل المنبثقة</string>
+  <string name="morphe_hide_player_flyout_summary">إخفاء أو عرض مكونات قائمة المشغل المنبثقة</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">إخفاء الترجمة</string>
   <string name="morphe_hide_player_flyout_captions_summary_on">تم إخفاء قائمة الترجمة</string>
   <string name="morphe_hide_player_flyout_captions_summary_off">يتم عرض قائمة الترجمة</string>
+  <string name="morphe_hide_player_flyout_captions_footer_title">إخفاء نص الترجمة السفلي</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_on">تم إخفاء النص السفلي لقائمة الترجمة</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_off">يتم عرض النص السفلي لقائمة الترجمة</string>
+  <string name="morphe_hide_player_flyout_captions_header_title">إخفاء عنوان الترجمة</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_on">تم إخفاء عنوان قائمة الترجمة</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_off">يتم عرض عنوان قائمة الترجمة</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_additional_settings_title">إخفاء إعدادات إضافية / المزيد</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_on">تم إخفاء قائمة إعدادات إضافية</string>
@@ -813,17 +843,23 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_not_available">"تم إخفاء قائمة المقطع الصوتي
 
 لعرض قائمة المقطع الصوتي، غيّر 'Spoof Video Streams' إلى 'Android Reel' أو 'TV'"</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_title">إخفاء نص المقطع الصوتي السفلي</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_on">تم إخفاء النص السفلي لقائمة المقطع الصوتي</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_off">يتم عرض النص السفلي لقائمة المقطع الصوتي</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">إخفاء المشاهدة في VR</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">تم إخفاء قائمة المشاهدة في الوضع الافتراضي</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_off">يتم عرض قائمة المشاهدة في الوضع الافتراضي</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_video_quality_title">إخفاء قائمة جودة الفيديو</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_on">تم إخفاء قائمة جودة الفيديو</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_off">يتم عرض قائمة جودة الفيديو</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_title">إخفاء تذييل قائمة جودة الفيديو</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">تم إخفاء تذييل قائمة جودة الفيديو</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">يتم عرض تذييل قائمة جودة الفيديو</string>
+  <string name="morphe_hide_player_flyout_quality_title">إخفاء الجودة</string>
+  <string name="morphe_hide_player_flyout_quality_summary_on">تم إخفاء قائمة الجودة</string>
+  <string name="morphe_hide_player_flyout_quality_summary_off">يتم عرض قائمة الجودة</string>
+  <string name="morphe_hide_player_flyout_quality_footer_title">إخفاء نص الجودة السفلي</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_on">تم إخفاء النص السفلي لقائمة الجودة</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_off">يتم عرض النص السفلي لقائمة الجودة</string>
+  <string name="morphe_hide_player_flyout_quality_header_title">إخفاء عنوان الجودة</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_on">تم إخفاء عنوان قائمة جودة الفيديو الحالي</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_off">يتم عرض عنوان قائمة جودة الفيديو الحالي</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">إخفاء معاينة التشغيل التلقائي</string>
   <string name="morphe_hide_autoplay_preview_summary_on">تم إخفاء معاينة التشغيل التلقائي</string>
@@ -1623,6 +1659,12 @@ Second \"item\" text"</string>
 • لا يمكن لبعض الأجهزة فرض AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">لاستخدام هذه الميزة، غيّر \'Spoof video streams\' إلى Android VR أو Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">زيادة مدة رجوع البث المباشر</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">تم زيادة مدة رجوع البث المباشر لتصل إلى 7 أيام</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">مدة رجوع البث المباشر تقتصر على الإعداد الافتراضي للخادم</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">قد يتسبب هذا الإعداد في سلوك غير متوقع إذا لم يتم تمكين \'Spoof Video Streams\'.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">عرض قائمة جودة الفيديو المتقدمة</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">يتم عرض قائمة جودة الفيديو المتقدمة</string>

@@ -119,6 +119,9 @@ Változások:
   <string name="morphe_hide_playables_title">Lejátszható elemek elrejtése</string>
   <string name="morphe_hide_playables_summary_on">A játékszoba rejtett</string>
   <string name="morphe_hide_playables_summary_off">A játékszoba megjelenik</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Rejtse el a kereseti kifejezés miniatúráit</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">A kereseti kifejezés miniatúrái el vannak rejtve</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">A kereseti kifejezés miniatúrái láthatóak</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">\'Továbbiak megjelenítése\' gomb elrejtése</string>
@@ -499,6 +502,25 @@ Ellenőrizze, hogy a csomagnév helyes-e, és az alkalmazás telepítve van-e."<
   <string name="morphe_loop_video_button_summary_off">A videó folyamatos ismétlése menü el van rejtve</string>
   <string name="morphe_loop_video_button_toast_on">A hurokismétlés be van kapcsolva</string>
   <string name="morphe_loop_video_button_toast_off">A hurokismétlés ki van kapcsolva</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Játsszon minden gomb megjelenítése</string>
+  <string name="morphe_play_all_button_summary_on">"A játsszon minden gomb megjelenítése\nA lejátszási lista létrehozásához koppintson az összes csatornán lévő videóhoz\nHosszú ráklikkeléssel megfordítható a művelet:\n\nInformáció: Előfordulhat, hogy a közvetlen adásokon nem működik"</string>
+  <string name="morphe_play_all_button_summary_off">A játsszon minden gomb nem jelenik meg</string>
+  <string name="morphe_play_all_button_type_title">Játsszon minden mód</string>
+  <string name="morphe_play_all_button_type_entry_0">A teljes tartalom (Rendezés idő szerint, Állórend)</string>
+  <string name="morphe_play_all_button_type_entry_1">A teljes tartalom (Rendezés idő szerint)</string>
+  <string name="morphe_play_all_button_type_entry_2">A teljes tartalom (Rendezés népszerűség szerint)</string>
+  <string name="morphe_play_all_button_type_entry_3">Csak videók (Rendezés idő szerint)</string>
+  <string name="morphe_play_all_button_type_entry_4">Csak videók (Rendezés népszerűség szerint)</string>
+  <string name="morphe_play_all_button_type_entry_5">Csak Shortok (Rendezés idő szerint)</string>
+  <string name="morphe_play_all_button_type_entry_6">Csak Shortok (Rendezés népszerűség szerint)</string>
+  <string name="morphe_play_all_button_type_entry_7">Csak streamelt videók (Rendezés idő szerint)</string>
+  <string name="morphe_play_all_button_type_entry_8">Csak streamelt videók (Rendezés népszerűség szerint)</string>
+  <string name="morphe_play_all_button_type_entry_9">Csak minden tag tartalma</string>
+  <string name="morphe_play_all_button_type_entry_10">Csak tag videók</string>
+  <string name="morphe_play_all_button_type_entry_11">Csak tag Shortok</string>
+  <string name="morphe_play_all_button_type_entry_12">Csak tag élő streamjei</string>
+  <string name="morphe_play_all_button_not_available_toast">A lejátszási listát nem sikerült létrehozni a csatornaazonosító egyeztetési hibája miatt</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Videó újraindítás gomb megjelenítése</string>
   <string name="morphe_reload_video_summary_on">A videó újraindítás gomb látható</string>
@@ -512,6 +534,8 @@ Ellenőrizze, hogy a csomagnév helyes-e, és az alkalmazás telepítve van-e."<
   <string name="morphe_livestream_dvr_title">Engedélyezze az élsőségi DVR-t</string>
   <string name="morphe_livestream_dvr_summary_on">A keresés minden élsőségnél engedélyezett</string>
   <string name="morphe_livestream_dvr_summary_off">A keresés előfordulhat, hogy nem áll rendelkezésre az élsőségnél</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">A funkció engedélyezése váratlan élő közvetítés keresést okozhat, ha a \'Videó stream-ek hamisítása\' nem engedélyezett.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Csúsztatás engedélyezése a kereséshez</string>
   <string name="morphe_slide_to_seek_summary_on">A csúsztatás a kereséshez engedélyezve van</string>
@@ -762,11 +786,17 @@ Ertett hosszan nyomva a YouTube beállítások megnyitása"</string>
 Ertett hosszan nyomva a Morphe beállítások megnyitása"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Előugró menü</string>
-  <string name="morphe_hide_player_flyout_summary">A lejátszó előugró menüpontjainak elrejtése vagy megjelenítése</string>
+  <string name="morphe_hide_player_flyout_summary">A lejátszó előugró menü összetevőinek elrejtése vagy megjelenítése</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Feliratok elrejtése</string>
   <string name="morphe_hide_player_flyout_captions_summary_on">A feliratok menü el van rejtve</string>
   <string name="morphe_hide_player_flyout_captions_summary_off">A feliratok menü megjelenítve</string>
+  <string name="morphe_hide_player_flyout_captions_footer_title">Felirat láblécrejtés</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_on">A feliratok menü el van rejtve</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_off">A feliratok menü megjelenítve</string>
+  <string name="morphe_hide_player_flyout_captions_header_title">Felirat fejléc elrejtése</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_on">A feliratok menü el van rejtve</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_off">A feliratok menü megjelenítve</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_additional_settings_title">További beállítások elrejtése</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_on">A további beállítások menü el van rejtve</string>
@@ -812,17 +842,23 @@ Ertett hosszan nyomva a Morphe beállítások megnyitása"</string>
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Hangos menü elrejtve
 
 A Hangos menü megjelenítéséhez változtassa meg a 'Spoof video streams'-et 'Android Reel'-re vagy 'TV'-re"</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_title">Hangsáv elrejtése</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_on">A hangsáv menü el van rejtve</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_off">A hangsáv menü megjelenik</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">\"Megtekintés VR-módban\" elrejtése</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">A megtekintés VR-módban menü el van rejtve</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_off">A „Megtekintés VR-módban” menü megjelenik</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_video_quality_title">Videóminőség menü elrejtése</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_on">A videóminőség menü elrejtve</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_off">A videóminőség menü megjelenítve</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_title">Videóminőség menü láblécének elrejtése</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">A videóminőség menü lábléce el van rejtve</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">Megjelenik a videóminőség menü lábléce</string>
+  <string name="morphe_hide_player_flyout_quality_title">Minőség</string>
+  <string name="morphe_hide_player_flyout_quality_summary_on">A videóminőség menü elrejtve</string>
+  <string name="morphe_hide_player_flyout_quality_summary_off">A videóminőség menü megjelenítve</string>
+  <string name="morphe_hide_player_flyout_quality_footer_title">A videóminőség menü láblécének elrejtése</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_on">A videóminőség menü lábléce el van rejtve</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_off">Megjelenik a videóminőség menü lábléce</string>
+  <string name="morphe_hide_player_flyout_quality_header_title">Minőség</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_on">A videóminőség menü lábléce el van rejtve</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_off">Megjelenik a videóminőség menü lábléce</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Automatikus előnézet elrejtése</string>
   <string name="morphe_hide_autoplay_preview_summary_on">Az automatikus előnézet el van rejtve</string>
@@ -1620,6 +1656,12 @@ Korlátozások:
 • Néhány eszköz nem tudja kikényszeríteni az AVC-t"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">A funkció használatához módosítsa a \"Videóstreamek hamisítása\" beállítást Android VR vagy Android Studio-ra</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Bővítsd a közvetítés DVR idejét</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">A közvetítés DVR ideje legfeljebb 7 napra bővült</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">A közvetítés DVR ideje korlátozott a szerver alapértelmezésére</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Ez a beállítás váratlan viselkedést okozhat, ha a \'Spoof video stream\'-et nem engedélyezted.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Speciális videóminőség menü megjelenítése</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">A speciális videóminőség menü látható</string>

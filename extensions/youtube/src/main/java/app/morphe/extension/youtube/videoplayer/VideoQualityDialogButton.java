@@ -15,11 +15,11 @@ import static app.morphe.extension.shared.settings.preference.CustomDialogListPr
 import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.ID_MORPHE_CHECK_ICON_PLACEHOLDER;
 import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.ID_MORPHE_ITEM_TEXT;
 import static app.morphe.extension.shared.settings.preference.CustomDialogListPreference.LAYOUT_MORPHE_CUSTOM_LIST_ITEM_CHECKED;
+import static app.morphe.extension.youtube.patches.LegacyPlayerControlsPatch.RESTORE_OLD_PLAYER_BUTTONS;
 import static app.morphe.extension.youtube.patches.VideoInformation.AUTOMATIC_VIDEO_QUALITY_VALUE;
 import static app.morphe.extension.youtube.patches.VideoInformation.isPremiumVideoQuality;
 import static app.morphe.extension.youtube.videoplayer.LegacyPlayerControlButton.fadeInDuration;
 import static app.morphe.extension.youtube.videoplayer.LegacyPlayerControlButton.getDialogBackgroundColor;
-import static app.morphe.extension.youtube.videoplayer.PlayerOverlayButton.RESTORE_OLD_PLAYER_BUTTONS;
 
 import android.content.Context;
 import android.text.Spannable;
@@ -104,7 +104,7 @@ public class VideoQualityDialogButton {
      */
     public static void initializeLegacyButton(View controlsView) {
         try {
-            if (!PlayerOverlayButton.RESTORE_OLD_PLAYER_BUTTONS) {
+            if (!RESTORE_OLD_PLAYER_BUTTONS) {
                 return;
             }
 
@@ -317,16 +317,10 @@ public class VideoQualityDialogButton {
             );
 
             // Add title with current quality.
-            TextView titleView = new TextView(context);
-            titleView.setText(spannableTitle);
-            titleView.setTextSize(16);
-            // Remove setTextColor since color is handled by SpannableStringBuilder.
-            LinearLayout.LayoutParams titleParams = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT);
-            titleParams.setMargins(Dim.dp12, Dim.dp16, 0, Dim.dp16);
-            titleView.setLayoutParams(titleParams);
-            mainLayout.addView(titleView);
+            if (!Settings.HIDE_PLAYER_FLYOUT_QUALITY_HEADER.get()) {
+                TextView titleView = getTextView(context, spannableTitle);
+                mainLayout.addView(titleView);
+            }
 
             // Create ListView for quality selection.
             ListView listView = new ListView(context);
@@ -384,6 +378,20 @@ public class VideoQualityDialogButton {
         } catch (Exception ex) {
             Logger.printException(() -> "showVideoQualityDialog failure", ex);
         }
+    }
+
+    @NonNull
+    private static TextView getTextView(Context context, SpannableStringBuilder spannableTitle) {
+        TextView titleView = new TextView(context);
+        titleView.setText(spannableTitle);
+        titleView.setTextSize(16);
+        // Remove setTextColor since color is handled by SpannableStringBuilder.
+        LinearLayout.LayoutParams titleParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        titleParams.setMargins(Dim.dp12, Dim.dp16, 0, Dim.dp16);
+        titleView.setLayoutParams(titleParams);
+        return titleView;
     }
 
     private static class CustomQualityAdapter extends ArrayAdapter<String> {

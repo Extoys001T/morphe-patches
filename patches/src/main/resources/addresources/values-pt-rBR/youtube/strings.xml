@@ -119,6 +119,9 @@ As mudanças incluem:
   <string name="morphe_hide_playables_title">Ocultar Playables</string>
   <string name="morphe_hide_playables_summary_on">Os Playables estão ocultos</string>
   <string name="morphe_hide_playables_summary_off">Os Playables são mostrados</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Ocultar miniaturas dos termos de pesquisa</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Miniaturas dos termos de pesquisa estão ocultas</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Miniaturas dos termos de pesquisa estão visíveis</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Ocultar botão \'Mostrar mais\'</string>
@@ -499,6 +502,25 @@ Verifique se o nome do pacote está correto e se o aplicativo está instalado"</
   <string name="morphe_loop_video_button_summary_off">Botão de loop de vídeo não é mostrado</string>
   <string name="morphe_loop_video_button_toast_on">Vídeo em loop está ativado</string>
   <string name="morphe_loop_video_button_toast_off">Vídeo em loop está desativado</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Mostrar botão reproduzir tudo</string>
+  <string name="morphe_play_all_button_summary_on">"O botão reproduzir tudo é exibido\nToque para gerar uma playlist de todos os vídeos do canal\nToque e segure para desfazer\n\nInformação: Pode não funcionar em transmissões ao vivo"</string>
+  <string name="morphe_play_all_button_summary_off">O botão reproduzir tudo não é exibido</string>
+  <string name="morphe_play_all_button_type_title">Modo gerar playlist</string>
+  <string name="morphe_play_all_button_type_entry_0">Todos os conteúdos (Ordenar por tempo, Ascendente)</string>
+  <string name="morphe_play_all_button_type_entry_1">Todos os conteúdos (Ordenar por tempo)</string>
+  <string name="morphe_play_all_button_type_entry_2">Todos os conteúdos (Ordenar por popularidade)</string>
+  <string name="morphe_play_all_button_type_entry_3">Vídeos apenas (Ordenar por tempo)</string>
+  <string name="morphe_play_all_button_type_entry_4">Vídeos apenas (Ordenar por popularidade)</string>
+  <string name="morphe_play_all_button_type_entry_5">Shorts apenas (Ordenar por tempo)</string>
+  <string name="morphe_play_all_button_type_entry_6">Shorts apenas (Ordenar por popularidade)</string>
+  <string name="morphe_play_all_button_type_entry_7">Vídeos transmitidos apenas (Ordenar por tempo)</string>
+  <string name="morphe_play_all_button_type_entry_8">Vídeos transmitidos apenas (Ordenar por popularidade)</string>
+  <string name="morphe_play_all_button_type_entry_9">Conteúdos apenas de todos os membros</string>
+  <string name="morphe_play_all_button_type_entry_10">Vídeos apenas de membros</string>
+  <string name="morphe_play_all_button_type_entry_11">Shorts apenas de membros</string>
+  <string name="morphe_play_all_button_type_entry_12">Transmissões ao vivo apenas de membros</string>
+  <string name="morphe_play_all_button_not_available_toast">Não foi possível gerar a lista de reprodução devido a uma incompatibilidade de ID de canal</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Mostrar botão de recarregar vídeo</string>
   <string name="morphe_reload_video_summary_on">Botão de recarregar vídeo está visível</string>
@@ -512,6 +534,8 @@ Verifique se o nome do pacote está correto e se o aplicativo está instalado"</
   <string name="morphe_livestream_dvr_title">Ativar DVR de livestream</string>
   <string name="morphe_livestream_dvr_summary_on">É possível buscar em todos os livestreams</string>
   <string name="morphe_livestream_dvr_summary_off">A busca pode não estar disponível em livestreams</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Habilitar isso pode causar um comportamento inesperado de busca ao vivo se \'Simular fluxos de vídeo\' não estiver ativado.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Ativar gesto na barra de busca</string>
   <string name="morphe_slide_to_seek_summary_on">Gesto na barra de busca está ativado</string>
@@ -762,11 +786,17 @@ Toque e segure para abrir as configurações do YouTube"</string>
 Toque e segure para abrir as configurações do Morphe"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Menu suspenso</string>
-  <string name="morphe_hide_player_flyout_summary">Ocultar ou mostrar itens no menu suspenso do player</string>
+  <string name="morphe_hide_player_flyout_summary">Ocultar ou mostrar componentes do menu suspenso do player</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ocultar Legendas</string>
   <string name="morphe_hide_player_flyout_captions_summary_on">Menu de legendas está oculto</string>
   <string name="morphe_hide_player_flyout_captions_summary_off">Menu de legendas está visível</string>
+  <string name="morphe_hide_player_flyout_captions_footer_title">Ocultar rodapé de Legendas</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_on">Menu de legendas está oculto</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_off">Menu de legendas está visível</string>
+  <string name="morphe_hide_player_flyout_captions_header_title">Ocultar cabeçalho de Legendas</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_on">Menu de legendas está oculto</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_off">Menu de legendas está visível</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_additional_settings_title">Ocultar Configurações adicionais / Mais</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_on">Menu de configurações adicionais / Mais está oculto</string>
@@ -812,17 +842,23 @@ Toque e segure para abrir as configurações do Morphe"</string>
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu de faixas de áudio está oculto
 
 Para mostrar o menu de faixas de áudio, mude 'Spoof video streams' para 'Android Reel' ou 'TV'"</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_title">Ocultar Faixa de áudio</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_on">Menu faixa de áudio está oculto</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_off">Menu faixa de áudio não está oculto</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Ocultar Assistir no VR</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Menu assistir no VR está oculto</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_off">Menu assistir no VR não está oculto</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_video_quality_title">Ocultar menu de qualidade</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_on">Menu de qualidade está oculto</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_off">Menu de qualidade está visível</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_title">Ocultar rodapé do menu de qualidade</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">Rodapé do menu de qualidade está oculto</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">Rodapé do menu de qualidade está visível</string>
+  <string name="morphe_hide_player_flyout_quality_title">Qualidade</string>
+  <string name="morphe_hide_player_flyout_quality_summary_on">O menu de qualidade de vídeo está oculto</string>
+  <string name="morphe_hide_player_flyout_quality_summary_off">O menu de qualidade de vídeo é exibido</string>
+  <string name="morphe_hide_player_flyout_quality_footer_title">Ocultar rodapé do menu de qualidade de vídeo</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_on">O rodapé do menu de qualidade de vídeo está oculto</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_off">Rodapé do menu de qualidade de vídeo não está ocultos</string>
+  <string name="morphe_hide_player_flyout_quality_header_title">Qualidade</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_on">O rodapé do menu de qualidade de vídeo está oculto</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_off">Rodapé do menu de qualidade de vídeo não está ocultos</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Ocultar visualização automática</string>
   <string name="morphe_hide_autoplay_preview_summary_on">Visualização automática está oculta</string>
@@ -1623,6 +1659,12 @@ Limitações:
 • Alguns dispositivos não conseguem forçar o AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Para usar este recurso, altere \'Falsificar fluxos de vídeo\' para VR Android ou Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Expandir a duração do DVR da transmissão ao vivo</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">A duração do DVR da transmissão ao vivo foi expandida até 7 dias</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">A duração do DVR da transmissão ao vivo está limitada à configuração padrão do servidor</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Esta configuração pode causar comportamento inesperado se \'Simular fluxos de vídeo\' não estiver ativado.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Mostrar menu de qualidade de vídeo avançado</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">O menu de qualidade de vídeo avançado é exibido</string>

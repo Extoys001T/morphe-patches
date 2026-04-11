@@ -120,6 +120,9 @@ Muutoksia ovat muun muassa:
   <string name="morphe_hide_playables_title">Piilota Pelattavat</string>
   <string name="morphe_hide_playables_summary_on">Pelattavat piilotetaan</string>
   <string name="morphe_hide_playables_summary_off">Pelattavat näytetään</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Piilota hakutermin pienoiskuvat</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Hakutermin pienoiskuvat on piilotettu</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Hakutermin pienoiskuvat on näytössä</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Piilota \"Näytä lisää\" -painike</string>
@@ -501,6 +504,25 @@ Tarkista, että paketin nimi on oikein ja sovellus on asennettu"</string>
   <string name="morphe_loop_video_button_summary_off">Toista videota jatkuvasti -valinta näytetään</string>
   <string name="morphe_loop_video_button_toast_on">Jatkuva toisto on käytössä</string>
   <string name="morphe_loop_video_button_toast_off">Jatkuva toisto ei ole käytössä</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Näytä soittokaikki-painike</string>
+  <string name="morphe_play_all_button_summary_on">"Soittokaikki-painiketta ei näytetä\nNapauta luodaksesi soittolistan kaikista kanavan videoista\nPidä painettuna peruuttaaksesi\n\nInfo: Ei välttämättä toimi suoratoistoissa"</string>
+  <string name="morphe_play_all_button_summary_off">Soittokaikki-painiketta ei näytetä</string>
+  <string name="morphe_play_all_button_type_title">Luo soittolistan tila</string>
+  <string name="morphe_play_all_button_type_entry_0">Kaikki sisällöt (Järjestä ajan mukaan, Nouseva)</string>
+  <string name="morphe_play_all_button_type_entry_1">Kaikki sisällöt (Järjestä ajan mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_2">Kaikki sisällöt (Järjestä suosion mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_3">Videot (Järjestä ajan mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_4">Videot (Järjestä suosion mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_5">Shortsit (Järjestä ajan mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_6">Shortsit (Järjestä suosion mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_7">Striimivideot (Järjestä ajan mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_8">Striimivideot (Järjestä suosion mukaan)</string>
+  <string name="morphe_play_all_button_type_entry_9">Vain jäsenien sisällöt</string>
+  <string name="morphe_play_all_button_type_entry_10">Vain jäsenten videot</string>
+  <string name="morphe_play_all_button_type_entry_11">Vain jäsenten shortsit</string>
+  <string name="morphe_play_all_button_type_entry_12">Vain jäsenten striimivideot</string>
+  <string name="morphe_play_all_button_not_available_toast">Kanavatunnuserojen vuoksi soittolistaa ei voitu luoda</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Näytä videon uudelleenlataus -painike</string>
   <string name="morphe_reload_video_summary_on">Videon uudelleenlataus -painike näytetään</string>
@@ -514,6 +536,8 @@ Tarkista, että paketin nimi on oikein ja sovellus on asennettu"</string>
   <string name="morphe_livestream_dvr_title">Ota suoratoistinauhoitus käyttöön</string>
   <string name="morphe_livestream_dvr_summary_on">Hakeminen on sallittu kaikissa suoratoistoissa</string>
   <string name="morphe_livestream_dvr_summary_off">Hakeminen ei ehkä ole saatavilla suoratoistoissa</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Tämän käyttöönotto voi aiheuttaa odottamattoman suoratoiston hakukäyttäytymisen, jos \'Spoof-videovirrat\' ei ole käytössä.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Ota kelaus liu\'uttamalla käyttöön</string>
   <string name="morphe_slide_to_seek_summary_on">Kelaus liu\'uttamalla on käytössä</string>
@@ -766,11 +790,17 @@ Pidä painettuna avataksesi YouTube-asetukset"</string>
 Pidä painettuna avataksesi Morphen asetukset"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Ponnahdusvalikko</string>
-  <string name="morphe_hide_player_flyout_summary">Piilota tai näytä soittimen ponnahdusvalikon kohteita</string>
+  <string name="morphe_hide_player_flyout_summary">Piilota tai näytä soitinvalikon komponentit</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Piilota Tekstitykset</string>
   <string name="morphe_hide_player_flyout_captions_summary_on">Tekstitysvalikko piilotetaan</string>
   <string name="morphe_hide_player_flyout_captions_summary_off">Tekstitysvalikko näytetään</string>
+  <string name="morphe_hide_player_flyout_captions_footer_title">Piilota Tekstitykset -alapalkki</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_on">Tekstitysvalikko piilotetaan</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_off">Tekstitysvalikko näytetään</string>
+  <string name="morphe_hide_player_flyout_captions_header_title">Piilota Tekstitykset -otsikko</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_on">Tekstitysvalikon otsikko piilotetaan</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_off">Tekstitysvalikon otsikko näytetään</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_additional_settings_title">Piilota Lisäasetukset / Lisää</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_on">Lisäasetukset / Lisää -valikko piilotetaan</string>
@@ -816,17 +846,23 @@ Pidä painettuna avataksesi Morphen asetukset"</string>
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Ääniraitavalikko on piilotettu
 
 Jos haluat näyttää ääniraitavalikon, vaihda \"Naamioi videovirrat\" -asetukseksi \"Android Reel\" tai \"TV\""</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_title">Piilota Ääniraita</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_on">Ääniraitavalikko piilotetaan</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_off">Ääniraitavalikko näytetään</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Piilota Katso VR-tilassa</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Katso VR-tilassa -valikko piilotetaan</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_off">Katso VR-tilassa -valikko näytetään</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_video_quality_title">Piilota videolaatuvalikko</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_on">Videolaatuvalikko piilotetaan</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_off">Videolaatuvalikko näytetään</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_title">Piilota videolaatuvalikon alatunniste</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">Videolaatuvalikon alatunniste piilotetaan</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">Videolaatuvalikon alatunniste näytetään</string>
+  <string name="morphe_hide_player_flyout_quality_title">Piilota Laatu</string>
+  <string name="morphe_hide_player_flyout_quality_summary_on">Videolaatuvalikko piilotetaan</string>
+  <string name="morphe_hide_player_flyout_quality_summary_off">Videolaatuvalikko näytetään</string>
+  <string name="morphe_hide_player_flyout_quality_footer_title">Piilota videolaatuvalikon alatunniste</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_on">Videolaatuvalikon alatunniste piilotetaan</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_off">Videolaatuvalikon alatunniste näytetään</string>
+  <string name="morphe_hide_player_flyout_quality_header_title">Piilota Laatu otsikko</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_on">Videolaatuvalikon alatunniste piilotetaan</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_off">Videolaatuvalikon alatunniste näytetään</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Piilota automaattinen esikatselu</string>
   <string name="morphe_hide_autoplay_preview_summary_on">Automaattinen esikatselu piilotetaan</string>
@@ -1628,6 +1664,12 @@ Rajoitukset:
 • Jotkin laitteet eivät voi pakottaa AVC:tä"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Käyttääksesi tätä ominaisuutta, muuta \'Naamioi videovirrat\' arvoksi Android VR tai Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Laajenna suoran lähetyksen DVR:n kestoa</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Suoran lähetyksen DVR:n kesto on laajennettu enintään 7 päivään</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Suoran lähetyksen DVR:n kesto on rajoitettu palvelimen oletusasetukseen</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Tämä asetus voi aiheuttaa odottamattoman käytöksen, jos \'Väärennä videovirtoja\' ei ole käytössä.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Näytä edistynyt videolaatuvalikko</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Edistynyt videolaatuvalikko näytetään</string>

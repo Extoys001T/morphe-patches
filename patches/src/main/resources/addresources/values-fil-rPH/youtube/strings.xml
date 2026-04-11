@@ -120,6 +120,9 @@ Kasama sa mga pagbabago ang:
   <string name="morphe_hide_playables_title">Itago ang Mga Playable</string>
   <string name="morphe_hide_playables_summary_on">Nakatago ang Mga Playable</string>
   <string name="morphe_hide_playables_summary_off">Ipinapakita ang Mga Playable</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Itago ang mga thumbnail ng termino sa paghahanap</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Nakatago ang mga thumbnail ng termino sa paghahanap</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Ipinapakita ang mga thumbnail ng termino sa paghahanap</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Itago ang button na \'Magpakita ng higit pa\'</string>
@@ -500,6 +503,25 @@ Suriin kung tama ang pangalan ng package at naka-install ang app"</string>
   <string name="morphe_loop_video_button_summary_off">Hindi ipinapakita ang button ng loop ng video</string>
   <string name="morphe_loop_video_button_toast_on">Naka-on ang loop video</string>
   <string name="morphe_loop_video_button_toast_off">Naka-off ang loop video</string>
+  <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">Ipakita ang button na \'Play all\'</string>
+  <string name="morphe_play_all_button_summary_on">"Ipinapakita ang button na 'Play all'\nI-tap para bumuo ng playlist ng lahat ng video mula sa channel\nI-tap nang matagal para i-undo\n\nImpormasyon: Maaaring hindi gumana sa live streams"</string>
+  <string name="morphe_play_all_button_summary_off">Hindi ipinapakita ang button na \'Play all\'</string>
+  <string name="morphe_play_all_button_type_title">Mode ng pagbuo ng playlist</string>
+  <string name="morphe_play_all_button_type_entry_0">Lahat ng nilalaman (Pagbukud-bukurin ayon sa oras, Papataas)</string>
+  <string name="morphe_play_all_button_type_entry_1">Lahat ng nilalaman (Pagbukud-bukurin ayon sa oras)</string>
+  <string name="morphe_play_all_button_type_entry_2">Lahat ng nilalaman (Pagbukud-bukurin ayon sa sikat)</string>
+  <string name="morphe_play_all_button_type_entry_3">Mga bidyo lamang (Pagbukud-bukurin ayon sa oras)</string>
+  <string name="morphe_play_all_button_type_entry_4">Mga bidyo lamang (Pagbukud-bukurin ayon sa sikat)</string>
+  <string name="morphe_play_all_button_type_entry_5">Shorts lamang (Pagbukud-bukurin ayon sa oras)</string>
+  <string name="morphe_play_all_button_type_entry_6">Shorts lamang (Pagbukud-bukurin ayon sa sikat)</string>
+  <string name="morphe_play_all_button_type_entry_7">Mga na-stream na bidyo lamang (Pagbukud-bukurin ayon sa oras)</string>
+  <string name="morphe_play_all_button_type_entry_8">Mga na-stream na bidyo lamang (Pagbukud-bukurin ayon sa sikat)</string>
+  <string name="morphe_play_all_button_type_entry_9">Lahat ng nilalaman ng miyembro lamang</string>
+  <string name="morphe_play_all_button_type_entry_10">Mga bidyo ng miyembro lamang</string>
+  <string name="morphe_play_all_button_type_entry_11">Mga Shorts ng miyembro lamang</string>
+  <string name="morphe_play_all_button_type_entry_12">Mga live stream ng miyembro lamang</string>
+  <string name="morphe_play_all_button_not_available_toast">Hindi maaring buuin ang playlist dahil sa hindi tugmang ID ng channel</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Ipakita ang button na i-reload ang video</string>
   <string name="morphe_reload_video_summary_on">Ipinapakita ang button na i-reload ang video</string>
@@ -513,6 +535,8 @@ Suriin kung tama ang pangalan ng package at naka-install ang app"</string>
   <string name="morphe_livestream_dvr_title">I-enable ang livestream DVR</string>
   <string name="morphe_livestream_dvr_summary_on">Pinapayagan ang paghahanap sa lahat ng livestreams</string>
   <string name="morphe_livestream_dvr_summary_off">Maaaring hindi available ang paghahanap sa mga livestreams</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Ang pag-e-enable nito ay maaaring magdulot ng hindi inaasahang paghahanap sa livestream kung hindi naka-enable ang \'Spoof video streams\'.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Paganahin ang slide to seek</string>
   <string name="morphe_slide_to_seek_summary_on">Ang slide to seek ay pinagana</string>
@@ -763,11 +787,17 @@ I-tap nang matagal para buksan ang mga setting ng YouTube"</string>
 I-tap nang matagal para buksan ang mga setting ng Morphe"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Flyout menu</string>
-  <string name="morphe_hide_player_flyout_summary">Itago o ipakita ang mga item ng player flyout menu</string>
+  <string name="morphe_hide_player_flyout_summary">Itago o ipakita ang mga bahagi ng player flyout menu</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Itago ang mga Caption</string>
   <string name="morphe_hide_player_flyout_captions_summary_on">Ang menu ng Caption ay nakatago</string>
   <string name="morphe_hide_player_flyout_captions_summary_off">Ang menu ng Caption ay ipinapakita</string>
+  <string name="morphe_hide_player_flyout_captions_footer_title">Itago ang footer ng Captions</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_on">Nakatagong ang footer ng menu ng Captions</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_off">Ipinapakita ang footer ng menu ng Captions</string>
+  <string name="morphe_hide_player_flyout_captions_header_title">Itago ang header ng Captions</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_on">Nakatago ang header ng mga caption</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_off">Ipinapakita ang header ng mga caption</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_additional_settings_title">Itago ang karagdagang mga setting / Higit pa</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_on">Nakatago ang menu ng karagdagang mga setting / Higit pa</string>
@@ -813,17 +843,23 @@ I-tap nang matagal para buksan ang mga setting ng Morphe"</string>
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Nakatago ang menu ng audio track
 
 Upang ipakita ang menu ng Audio track, baguhin ang 'Spoof video streams' sa 'Android Reel' o 'TV'"</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_title">Itago ang footer ng track ng audio</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_on">Nakatago ang footer ng menu ng track ng audio</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_off">Ipinapakita ang footer ng menu ng track ng audio</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Itago ang Watch in VR</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Menu ng Watch in VR ay nakatago</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_off">Menu ng Watch in VR ay ipinapakita</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_video_quality_title">Itago ang menu ng kalidad</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_on">Nakatago ang menu ng kalidad</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_off">Ipinapakita ang menu ng kalidad</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_title">Itago ang footer ng menu ng kalidad</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">Nakatago ang footer ng menu ng kalidad</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">Ipinapakita ang footer ng menu ng kalidad</string>
+  <string name="morphe_hide_player_flyout_quality_title">Itago ang Kalidad</string>
+  <string name="morphe_hide_player_flyout_quality_summary_on">Nakatago ang menu ng Kalidad</string>
+  <string name="morphe_hide_player_flyout_quality_summary_off">Ipinapakita ang menu ng Kalidad</string>
+  <string name="morphe_hide_player_flyout_quality_footer_title">Itago ang footer ng Kalidad</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_on">Nakatago ang footer ng menu ng Kalidad</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_off">Ipinapakita ang footer ng menu ng Kalidad</string>
+  <string name="morphe_hide_player_flyout_quality_header_title">Itago ang header ng Kalidad</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_on">Nakatago ang header ng menu ng Kalidad</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_off">Ipinapakita ang header ng menu ng Kalidad</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Itago ang autoplay preview</string>
   <string name="morphe_hide_autoplay_preview_summary_on">Nakatago ang autoplay preview</string>
@@ -1624,6 +1660,12 @@ Mga limitasyon:
 • Ang ilang device ay hindi mapipilitan ng AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Upang gamitin ang tampok na ito, baguhin ang \'Gayahin ang mga video stream\' sa Android VR o Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Palawakin ang tagal ng livestream DVR</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Ang tagal ng livestream DVR ay pinalawak nang hanggang 7 araw</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Ang tagal ng livestream DVR ay limitado sa default ng server</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Ang setting na ito ay maaaring magdulot ng hindi inaasahang pag-uugali kung ang \'Spoof video streams\' ay hindi naka-enable.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Ipakita ang advanced na menu ng kalidad ng video</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Ipinapakita ang advanced na menu ng kalidad ng video</string>

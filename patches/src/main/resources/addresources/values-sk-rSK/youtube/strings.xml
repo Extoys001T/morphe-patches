@@ -246,12 +246,14 @@ Uistite sa, že názov balíka je správny a aplikácia je nainštalovaná"</str
   <string name="morphe_loop_video_button_summary_off">Tlačidlo opakovania videa sa nezobrazuje</string>
   <string name="morphe_loop_video_button_toast_on">Opakovanie videa je zapnuté</string>
   <string name="morphe_loop_video_button_toast_off">Opakovanie videa je vypnuté</string>
+  <!-- interaction.playall.playAllButtonPatch -->
   <!-- interaction.reload.reloadVideoPatch -->
   <string name="morphe_reload_video_title">Zobraziť tlačidlo pre obnovenie videa</string>
   <string name="morphe_reload_video_summary_on">Tlačidlo obnovenia videa sa zobrazuje</string>
   <string name="morphe_reload_video_summary_off">Tlačidlo obnovenia videa sa nezobrazuje</string>
   <!-- interaction.seekbar.disablePreciseSeekingGesturePatch -->
   <!-- interaction.seekbar.livestreamDvrPatch -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <!-- interaction.seekbar.enableTapToSeekPatch -->
   <!-- interaction.swipecontrols.swipeControlsResourcePatch -->
@@ -393,9 +395,8 @@ Hlasitosť možno zmeniť vertikálnym potiahnutím v pravej časti obrazovky"</
           'Android Reel' and 'TV' must be kept untranslated. -->
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_video_quality_title">Skryť tlačidlo Kvalita</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_on">Menu kvality videa je skryté</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_off">Menu kvality videa sa zobrazuje</string>
+  <string name="morphe_hide_player_flyout_quality_summary_on">Menu kvality videa je skryté</string>
+  <string name="morphe_hide_player_flyout_quality_summary_off">Menu kvality videa sa zobrazuje</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
@@ -802,6 +803,8 @@ Obmedzenia:
 • Vyššia spotreba dát pri prehrávaní videa ako VP9 alebo AV1
 • HDR videá nebudú využívať AVC
 • Niektoré zariadenia nemôžu vynútiť AVC"</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Zobraziť rozšírenú ponuku kvality videa</string>
