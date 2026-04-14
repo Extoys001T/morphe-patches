@@ -23,6 +23,7 @@ import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.playservice.is_20_28_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_30_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_20_31_or_greater
 import app.morphe.patches.youtube.misc.playservice.is_20_40_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
@@ -66,13 +67,14 @@ internal val legacyPlayerControlsResourcePatch = resourcePatch {
     lateinit var bottomTargetDocument: Document
 
     execute {
-        val targetResourceName = "youtube_controls_bottom_ui_container.xml"
+        bottomTargetDocument = document("res/layout/youtube_controls_bottom_ui_container.xml")
 
-        bottomTargetDocument = document("res/layout/$targetResourceName")
+        val bottomTargetElementList = bottomTargetDocument
+            .getElementsByTagName("android.support.constraint.ConstraintLayout")
+            .takeIf { it.length > 0 }
+            ?: bottomTargetDocument.getElementsByTagName("androidx.constraintlayout.widget.ConstraintLayout")
+        val bottomTargetElement = bottomTargetElementList.item(0)
 
-        val bottomTargetElement: Node = bottomTargetDocument.getElementsByTagName(
-            "android.support.constraint.ConstraintLayout",
-        ).item(0)
 
         val bottomTargetDocumentChildNodes = bottomTargetDocument.childNodes
         var bottomInsertBeforeNode: Node = bottomTargetDocumentChildNodes.findElementByAttributeValueOrThrow(
@@ -226,7 +228,7 @@ fun injectVisibilityCheckCall(descriptor: String) {
     )
 }
 
-internal const val EXTENSION_CLASS_DESCRIPTOR = "Lapp/morphe/extension/youtube/patches/LegacyPlayerControlsPatch;"
+internal const val EXTENSION_CLASS = "Lapp/morphe/extension/youtube/patches/LegacyPlayerControlsPatch;"
 
 private lateinit var inflateTopControlMethodRef : WeakReference<MutableMethod>
 private var inflateTopControlInsertIndex = -1
@@ -261,7 +263,7 @@ val legacyPlayerControlsPatch = bytecodePatch(
     )
 
     execute {
-        if (is_20_30_or_greater) {
+        if (is_20_31_or_greater) {
             PreferenceScreen.PLAYER.addPreferences(
                 SwitchPreference("morphe_restore_old_player_buttons")
             )
@@ -301,7 +303,7 @@ val legacyPlayerControlsPatch = bytecodePatch(
                 addInstruction(
                     index,
                     "invoke-static { v$register }, " +
-                            "$EXTENSION_CLASS_DESCRIPTOR->setFullscreenCloseButton(Landroid/view/View;)V",
+                            "$EXTENSION_CLASS->setFullscreenCloseButton(Landroid/view/View;)V",
                 )
             }
         }
@@ -320,7 +322,7 @@ val legacyPlayerControlsPatch = bytecodePatch(
             fingerprint.let {
                 it.method.insertLiteralOverride(
                     it.instructionMatches.first().index,
-                    "$EXTENSION_CLASS_DESCRIPTOR->" +
+                    "$EXTENSION_CLASS->" +
                             "usePlayerBottomControlsExploderLayout(Z)Z",
                 )
             }
@@ -366,7 +368,7 @@ val legacyPlayerControlsPatch = bytecodePatch(
                     addInstruction(
                         gradientViewIndex + 1,
                         "invoke-static { v$gradientViewRegister }, " +
-                                "$EXTENSION_CLASS_DESCRIPTOR->hideBottomGradientScrim(Landroid/widget/ImageView;)V"
+                                "$EXTENSION_CLASS->hideBottomGradientScrim(Landroid/widget/ImageView;)V"
                     )
                 }
             }

@@ -45,8 +45,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_title">លាក់ផ្ទាំងបដាតូចៗ</string>
   <string name="morphe_hide_compact_banner_summary_on">ផ្ទាំងបដាតូចៗ ត្រូវបានលាក់</string>
   <string name="morphe_hide_compact_banner_summary_off">ផ្ទាំងបដាតូចៗ ត្រូវបានបង្ហាញ</string>
-  <string name="morphe_hide_latest_posts_title">លាក់សារបង្ហោះចុងក្រោយ</string>
-  <string name="morphe_hide_latest_posts_summary_on">សារបង្ហោះចុងក្រោយត្រូវបានលាក់</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <!-- 'Notify me' should be translated using the same localized wording YouTube displays for the button.
@@ -86,6 +84,7 @@ Second \"item\" text"</string>
   <!-- interaction.reload.reloadVideoPatch -->
   <!-- interaction.seekbar.disablePreciseSeekingGesturePatch -->
   <!-- interaction.seekbar.livestreamDvrPatch -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <!-- interaction.seekbar.enableTapToSeekPatch -->
   <!-- interaction.swipecontrols.swipeControlsResourcePatch -->
@@ -212,6 +211,8 @@ Second \"item\" text"</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
   <!-- video.codecs.disableVideoCodecsPatch -->
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <!-- video.quality.hidePremiumVideoQualityPatch -->

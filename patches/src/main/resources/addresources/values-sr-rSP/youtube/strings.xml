@@ -70,36 +70,39 @@ Promene uključuju:
   <string name="morphe_hide_artist_cards_title">Сакриј картице извођача</string>
   <string name="morphe_hide_artist_cards_summary_on">Картице извођача су скривене</string>
   <string name="morphe_hide_artist_cards_summary_off">Картице извођача су приказане</string>
-  <string name="morphe_hide_chips_shelf_title">Сакриј полицу ознака сличних видеа</string>
-  <string name="morphe_hide_chips_shelf_summary_on">Полица ознака сличних видеа је скривена</string>
-  <string name="morphe_hide_chips_shelf_summary_off">Полица ознака сличних видеа је приказана</string>
   <string name="morphe_hide_community_posts_title">Сакриј објаве заједнице</string>
   <string name="morphe_hide_community_posts_summary_on">Објаве заједнице су скривене</string>
   <string name="morphe_hide_community_posts_summary_off">Објаве заједнице су приказане</string>
   <string name="morphe_hide_compact_banner_title">Сакриј компактне банере</string>
   <string name="morphe_hide_compact_banner_summary_on">Компактни банери су скривени</string>
   <string name="morphe_hide_compact_banner_summary_off">Компактни банери су приказани</string>
-  <string name="morphe_hide_expandable_card_title">Сакриј прошириву картицу</string>
-  <string name="morphe_hide_expandable_card_summary_on">Проширива картица испод видеа је скривена</string>
-  <string name="morphe_hide_expandable_card_summary_off">Развучена картица испод видео снимака је приказана</string>
+  <string name="morphe_hide_expandable_card_title">Сакриј прошириве картице</string>
+  <string name="morphe_hide_expandable_card_entry_1">Развучене картице испод видео снимака су приказане</string>
+  <string name="morphe_hide_expandable_card_entry_2">Проширива картица испод видеа је скривена</string>
+  <string name="morphe_hide_expandable_card_entry_3">Проширива картица испод видеа је скривена</string>
+  <string name="morphe_hide_expandable_card_entry_4">Проширива картица испод видеа је скривена</string>
+  <string name="morphe_hide_expandable_card_entry_5">Проширива картице испод видеа су скривене</string>
   <string name="morphe_hide_floating_microphone_button_title">Сакриј плутајуће дугме микрофона</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">Плутајуће дугме микрофона у претрази је скривено</string>
   <string name="morphe_hide_floating_microphone_button_summary_off">Плутајуће дугме микрофона у претрази је приказано</string>
   <string name="morphe_hide_horizontal_shelves_title">Сакриј хоризонталне полице</string>
   <string name="morphe_hide_horizontal_shelves_summary_on">"Хоризонталне полице су скривене, као што су:
-• Ударне вести
+
+• Новости у реалном времену
+• Објаве заједнице које вам се могу допасти
 • Наставите да гледате
 • Истражите више канала
-• Најрелевантније
+• Истражите више тема
+• За вас
+• Последњи видеи
+• Најрелевантнији
+• Објаве из Заједнице креатора
 • Куповина
-• Гледајте поново"</string>
+• Погледајте то поново"</string>
   <string name="morphe_hide_horizontal_shelves_summary_off">Хоризонталне полице су приказане</string>
   <string name="morphe_hide_image_shelf_title">Сакриј полицу са сликама</string>
   <string name="morphe_hide_image_shelf_summary_on">Полица са сликама у резултатима претраге је скривена</string>
   <string name="morphe_hide_image_shelf_summary_off">Полица са сликама у резултатима претраге је приказана</string>
-  <string name="morphe_hide_latest_posts_title">Сакриј најновије објаве</string>
-  <string name="morphe_hide_latest_posts_summary_on">Најновије објаве су скривене</string>
-  <string name="morphe_hide_latest_posts_summary_off">Најновије објаве су приказане</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Сакриј дугме \'Најновије видео\'</string>
@@ -119,6 +122,9 @@ Promene uključuju:
   <string name="morphe_hide_playables_title">Сакриј салу за игру</string>
   <string name="morphe_hide_playables_summary_on">Сала за игру је скривена</string>
   <string name="morphe_hide_playables_summary_off">Сала за игру је приказана</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Скриј мале слике у трази за претрагом</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Мале слике у трази за претрагом су скривене</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Мале слике у трази за претрагом су приказане</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Сакриј дугме „Прикажи још”</string>
@@ -295,6 +301,9 @@ Promene uključuju:
   <string name="morphe_hide_members_shelf_title">Сакриј полицу чланова</string>
   <string name="morphe_hide_members_shelf_summary_on">Полица чланова је скривена</string>
   <string name="morphe_hide_members_shelf_summary_off">Полица чланова је приказана</string>
+  <string name="morphe_hide_posts_shelf_title">Сакриј полицу објава</string>
+  <string name="morphe_hide_posts_shelf_summary_on">Полица објава је скривена</string>
+  <string name="morphe_hide_posts_shelf_summary_off">Полица објава је приказана</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_store_button_title">Сакриј дугме „Магазин”</string>
   <string name="morphe_hide_store_button_summary_on">Дугме „Магазин” је скривено</string>
@@ -531,6 +540,8 @@ Promene uključuju:
   <string name="morphe_livestream_dvr_title">Омогућите снимање преко директног преноса</string>
   <string name="morphe_livestream_dvr_summary_on">Тражење је дозвољено на свим директним преносима</string>
   <string name="morphe_livestream_dvr_summary_off">Тражење можда неће бити доступно на директним преносима</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Омогућавање ове функције може изазвати непредвиђено тражење у стримингу уживо ако није омогућено \'Варљиви видео снимци\'.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Омогући превлачење за премотавање</string>
   <string name="morphe_slide_to_seek_summary_on">Превлачење за премотавање је омогућено</string>
@@ -781,11 +792,17 @@ Cookies će biti automatski sačuvani ako su ispravni"</string>
 Додирните и задржите да отворите подешавања Morphe"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Падајући мени</string>
-  <string name="morphe_hide_player_flyout_summary">Сакријте или прикажите предмете у падајућем менију плејера</string>
+  <string name="morphe_hide_player_flyout_summary">Сакријте или прикажите компоненте менија за плејер који се испадају</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Сакриј мени „Титл”</string>
   <string name="morphe_hide_player_flyout_captions_summary_on">Мени „Титл” је скривен</string>
   <string name="morphe_hide_player_flyout_captions_summary_off">Мени „Титл” је приказан</string>
+  <string name="morphe_hide_player_flyout_captions_footer_title">Сакријте заглавље подножја Натписа</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_on">Подножје менија Натписа је сакривено</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_off">Подножје менија Натписа је приказано</string>
+  <string name="morphe_hide_player_flyout_captions_header_title">Сакријте заглавље Натписа</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_on">Мени „Титл” је скривен</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_off">Мени „Титл” је приказан</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_additional_settings_title">Сакриј мени „Додатне подешавања / Више”</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_on">Мени „Додатне подешавања / Више” је скривен</string>
@@ -831,17 +848,23 @@ Cookies će biti automatski sačuvani ako su ispravni"</string>
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Meni sa zvučnim stazama je sakriven
 
 Da bi prikazali meni sa zvučnim stazama, promenite 'Imitirati video tokove' u 'Android Reel' ili 'TV'"</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_title">Сакриј мени „Аудио снимак”</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_on">Мени „Аудио снимак” је скривен</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_off">Мени „Аудио снимак” је приказан</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Сакриј дугме „Гледај у ВР”</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Дугме „Гледај у ВР” је скривено</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_off">Дугме „Гледај у ВР” је приказано</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_video_quality_title">Сакриј мени квалитета видеа</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_on">Мени квалитета видеа је скривен</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_off">Мени квалитета видеа је приказан</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_title">Сакриј подножје менија квалитета видеа</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">Подножје менија квалитета видеа је скривено</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">Подножје менија квалитета видеа је приказано</string>
+  <string name="morphe_hide_player_flyout_quality_title">Сакриј квалитет</string>
+  <string name="morphe_hide_player_flyout_quality_summary_on">Мени квалитета видеа је скривен</string>
+  <string name="morphe_hide_player_flyout_quality_summary_off">Мени квалитета видеа је приказан</string>
+  <string name="morphe_hide_player_flyout_quality_footer_title">Сакриј подножје менија квалитета видеа</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_on">Подножје менија квалитета видеа је скривено</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_off">Подножје менија квалитета видеа је приказано</string>
+  <string name="morphe_hide_player_flyout_quality_header_title">Сакриј подножје менија квалитета</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_on">Подножје менија квалитета видеа је скривено</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_off">Подножје менија квалитета видеа је приказано</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Сакриј преглед аутоматског пуштања</string>
   <string name="morphe_hide_autoplay_preview_summary_on">Преглед аутоматског пуштања је скривен</string>
@@ -1642,6 +1665,12 @@ Vaš korisnički ID je kao lozinka i nikada ga ne treba deliti."</string>
 • Неки уређаји не могу присилити AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Да бисте користили ову функцију, промените \'Лажирани видео стримови\' на Android VR или Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Proširi trajanje DVR-a za striming</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Trajanje DVR-a za striming je prošireno do 7 dana</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Trajanje DVR-a za striming je ograničeno na podrazumevanu postavku servera</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Ova postavka može izazvati neočekivano ponašanje ako \'Simuluj video tokove\' nije uključeno.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Прикажи напредни мени квалитета видеа</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Напредни мени квалитета видеа је приказан</string>

@@ -7,8 +7,11 @@
 
 package app.morphe.patches.youtube.interaction.seekbar
 
+import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patches.shared.misc.settings.preference.PreferenceCategory
+import app.morphe.patches.shared.misc.settings.preference.PreferenceScreenPreference.Sorting
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.settings.PreferenceScreen
@@ -18,7 +21,7 @@ import app.morphe.util.findInstructionIndicesReversedOrThrow
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
-private const val EXTENSION_CLASS_DESCRIPTOR = "Lapp/morphe/extension/youtube/patches/LivestreamDvrPatch;"
+private const val EXTENSION_CLASS = "Lapp/morphe/extension/youtube/patches/LivestreamDvrPatch;"
 
 @Suppress("unused")
 val livestreamDvrPatch = bytecodePatch(
@@ -31,7 +34,15 @@ val livestreamDvrPatch = bytecodePatch(
 
     execute {
         PreferenceScreen.SEEKBAR.addPreferences(
-            SwitchPreference("morphe_livestream_dvr")
+            PreferenceCategory(
+                titleKey = null,
+                sorting = Sorting.UNSORTED,
+                tag = "app.morphe.extension.shared.settings.preference.NoTitlePreferenceCategory",
+                preferences = setOf(
+                    SwitchPreference("morphe_livestream_dvr"),
+                    SwitchPreference("morphe_expand_livestream_dvr_duration")
+                )
+            )
         )
 
         VideoStreamingDataAllowSeekingFingerprint.method.apply {
@@ -41,11 +52,24 @@ val livestreamDvrPatch = bytecodePatch(
                 addInstructionsAtControlFlowLabel(
                     returnIndex,
                     """
-                        invoke-static { v$returnRegister }, $EXTENSION_CLASS_DESCRIPTOR->enableLivestreamDvr(Z)Z
+                        invoke-static { v$returnRegister }, $EXTENSION_CLASS->enableLivestreamDvr(Z)Z
                         move-result v$returnRegister
                     """
                 )
             }
+        }
+
+        FormatStreamModelMaxDvrDurationFingerprint.method.apply {
+            val index = FormatStreamModelMaxDvrDurationFingerprint.instructionMatches.last().index
+            val register = getInstruction<OneRegisterInstruction>(index).registerA
+
+            addInstructions(
+                index,
+                """
+                    invoke-static { v$register, v${register + 1} }, $EXTENSION_CLASS->overrideMaxDvrDurationSec(D)D
+                    move-result-wide v$register
+                """
+            )
         }
     }
 }

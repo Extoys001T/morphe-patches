@@ -70,9 +70,6 @@ Second \"item\" text"</string>
   <string name="morphe_hide_artist_cards_title">הסתר כרטיסי אמן</string>
   <string name="morphe_hide_artist_cards_summary_on">כרטיסי אמן מוסתרים</string>
   <string name="morphe_hide_artist_cards_summary_off">כרטיסי אמן מוצגים</string>
-  <string name="morphe_hide_chips_shelf_title">הסתר מדף צ\'יפים</string>
-  <string name="morphe_hide_chips_shelf_summary_on">מדף צ\'יפים מוסתר</string>
-  <string name="morphe_hide_chips_shelf_summary_off">מדף צ\'יפים מוצג</string>
   <string name="morphe_hide_community_posts_title">הסתר פוסטים קהילתיים</string>
   <string name="morphe_hide_community_posts_summary_on">פוסטים קהילתיים מוסתרים</string>
   <string name="morphe_hide_community_posts_summary_off">פוסטים קהילתיים מוצגים</string>
@@ -80,26 +77,32 @@ Second \"item\" text"</string>
   <string name="morphe_hide_compact_banner_summary_on">כרזות קומפקטיות מוסתרות</string>
   <string name="morphe_hide_compact_banner_summary_off">כרזות קומפקטיות מוצגות</string>
   <string name="morphe_hide_expandable_card_title">הסתר כרטיס הניתן להרחבה</string>
-  <string name="morphe_hide_expandable_card_summary_on">כרטיס הניתן להרחבה מתחת לסרטונים מוסתר</string>
-  <string name="morphe_hide_expandable_card_summary_off">כרטיס הניתן להרחבה מתחת לסרטונים מוצג</string>
+  <string name="morphe_hide_expandable_card_entry_1">כרטיס הניתן להרחבה מתחת לסרטונים מוצג</string>
+  <string name="morphe_hide_expandable_card_entry_2">כרטיס הניתן להרחבה מתחת לסרטונים מוסתר</string>
+  <string name="morphe_hide_expandable_card_entry_3">כרטיס הניתן להרחבה מתחת לסרטונים מוסתר</string>
+  <string name="morphe_hide_expandable_card_entry_4">כרטיס הניתן להרחבה מתחת לסרטונים מוסתר</string>
+  <string name="morphe_hide_expandable_card_entry_5">כרטיסים הניתנים להרחבה מתחת לסרטונים מוסתרים</string>
   <string name="morphe_hide_floating_microphone_button_title">הסתר לחצן מיקרופון צף</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">לחצן מיקרופון צף בחיפוש מוסתר</string>
   <string name="morphe_hide_floating_microphone_button_summary_off">לחצן מיקרופון צף בחיפוש מוצג</string>
   <string name="morphe_hide_horizontal_shelves_title">הסתר מדפים אופקיים</string>
   <string name="morphe_hide_horizontal_shelves_summary_on">"מדפים אופקיים מוסתרים, כגון:
-• מבזקי חדשות
+
+• חדשות אחרונות
+• פוסטים מהקהילה שאתם עשויים לאהוב
 • המשך צפייה
-• גלה עוד ערוצים
-• רלוונטיות
+• גלו עוד ערוצים
+• גלו עוד נושאים
+• עבורך
+• סרטונים אחרונים
+• הרלוונטי ביותר
+• פוסטים מקהילת היוצרים
 • קניות
 • צפה שוב"</string>
   <string name="morphe_hide_horizontal_shelves_summary_off">מדפים אופקיים מוצגים</string>
   <string name="morphe_hide_image_shelf_title">הסתר מדף תמונות</string>
   <string name="morphe_hide_image_shelf_summary_on">מדף תמונות בתוצאות חיפוש מוסתר</string>
   <string name="morphe_hide_image_shelf_summary_off">מדף תמונות בתוצאות חיפוש מוצג</string>
-  <string name="morphe_hide_latest_posts_title">הסתר פוסטים אחרונים</string>
-  <string name="morphe_hide_latest_posts_summary_on">הפוסטים האחרונים מוסתרים</string>
-  <string name="morphe_hide_latest_posts_summary_off">הפוסטים האחרונים מוצגים</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">הסתר את לחצן \'וידאו אחרון\'</string>
@@ -119,6 +122,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_playables_title">הסתר משחקייה</string>
   <string name="morphe_hide_playables_summary_on">המשחקייה מוסתרת</string>
   <string name="morphe_hide_playables_summary_off">המשחקייה מוצגת</string>
+  <string name="morphe_hide_search_term_thumbnails_title">הסתר תמונות ממוזערות של מונחי חיפוש</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">תמונות ממוזערות של מונחי החיפוש מוסתרות</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">תמונות ממוזערות של מונחי החיפוש מוצגות</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">הסתר לחצן \'הצג עוד\'</string>
@@ -295,6 +301,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_members_shelf_title">הסתר מדף חברים</string>
   <string name="morphe_hide_members_shelf_summary_on">מדף חברים מוסתר</string>
   <string name="morphe_hide_members_shelf_summary_off">מדף חברים מוצג</string>
+  <string name="morphe_hide_posts_shelf_title">הסתר מדף פוסטים</string>
+  <string name="morphe_hide_posts_shelf_summary_on">מדף פוסטים מוסתר</string>
+  <string name="morphe_hide_posts_shelf_summary_off">מדף פוסטים מוצג</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_store_button_title">הסתר לחצן שיתוף</string>
   <string name="morphe_hide_store_button_summary_on">לחצן שיתוף מוסתר</string>
@@ -533,6 +542,8 @@ Second \"item\" text"</string>
   <string name="morphe_livestream_dvr_title">הפעל DVR לשידור חי</string>
   <string name="morphe_livestream_dvr_summary_on">ניתן לחפש בכל שידורים חיים</string>
   <string name="morphe_livestream_dvr_summary_off">ייתכן שלא ניתן יהיה לחפש בשידורים חיים</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">הפעלת התכונה הזו עלולה לגרום להתנהגות חיפוש לא צפויה בשידורי חיים, אם \'הדמיית זרמי וידאו\' לא מופעלת.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">הפעל החלק כדי לדלג</string>
   <string name="morphe_slide_to_seek_summary_on">החלק כדי לדלג מופעל</string>
@@ -783,11 +794,17 @@ Second \"item\" text"</string>
 החזיקו כדי לפתוח את הגדרות Morphe"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">תפריט נשלף</string>
-  <string name="morphe_hide_player_flyout_summary">הסתר או הצג פריטי תפריט נשלף של נגן</string>
+  <string name="morphe_hide_player_flyout_summary">הסתר או הצג רכיבי תפריט נשלף של נגן</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">הסתר כתוביות</string>
   <string name="morphe_hide_player_flyout_captions_summary_on">תפריט כתוביות מוסתר</string>
   <string name="morphe_hide_player_flyout_captions_summary_off">תפריט כתוביות מוצג</string>
+  <string name="morphe_hide_player_flyout_captions_footer_title">הסתר תذيק כתוביות</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_on">תפריט כתוביות מוסתר</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_off">תפריט כתוביות מוצג</string>
+  <string name="morphe_hide_player_flyout_captions_header_title">הסתר כותרת כתוביות</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_on">תפריט כתוביות מוסתר</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_off">תפריט כתוביות מוצג</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_additional_settings_title">הסתר הגדרות נוספות</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_on">תפריט הגדרות נוספות מוסתר</string>
@@ -833,17 +850,23 @@ Second \"item\" text"</string>
   <string name="morphe_hide_player_flyout_audio_track_not_available">"תפריט מסלול אודיו מוסתר
 
 כדי להראות את תפריט מסלול האודיו, שנה את 'מילוי סטריאו וידאו' ל'ריל אנדרואיד' או 'טלוויזיה'"</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_title">הסתר טראק אודיו</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_on">תפריט טראק אודיו מוסתר</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_off">תפריט טראק אודיו מוצג</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">הסתר \'צפה ב-VR\'</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">תפריט \'צפה ב-VR\' מוסתר</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_off">תפריט \'צפה ב-VR\' מוצג</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_video_quality_title">הסתר תפריט איכות סרטון</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_on">תפריט איכות סרטון מוסתר</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_off">תפריט איכות סרטון מוצג</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_title">הסתר כותרת תחתונה של תפריט איכות סרטון</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">כותרת תחתונה של תפריט איכות סרטון מוסתרת</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">כותרת תחתונה של תפריט איכות סרטון מוצגת</string>
+  <string name="morphe_hide_player_flyout_quality_title">הסתר איכות</string>
+  <string name="morphe_hide_player_flyout_quality_summary_on">תפריט איכות סרטון מוסתר</string>
+  <string name="morphe_hide_player_flyout_quality_summary_off">תפריט איכות סרטון מוצג</string>
+  <string name="morphe_hide_player_flyout_quality_footer_title">הסתר כותרת תחתונה של תפריט איכות סרטון</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_on">כותרת תחתונה של תפריט איכות סרטון מוסתרת</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_off">כותרת תחתונה של תפריט איכות סרטון מוצגת</string>
+  <string name="morphe_hide_player_flyout_quality_header_title">הסתר כותרת</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_on">כותרת תחתונה של תפריט איכות סרטון מוסתרת</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_off">כותרת תחתונה של תפריט איכות סרטון מוצגת</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">הסתר תצוגה מקדימה אוטומטית</string>
   <string name="morphe_hide_autoplay_preview_summary_on">תצוגה מקדימה אוטומטית מוסתרת</string>
@@ -1643,6 +1666,12 @@ Second \"item\" text"</string>
 • התקנים מסוימים אינם יכולים לאכוף AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">כדי להשתמש בתכונה זו, שנה את \'זיוף זרמי וידאו\' ל-Android VR או Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">הרחב את משך ה-DVR בשידור חי</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">משך ה-DVR בשידור חי הורחב עד 7 ימים</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">משך ה-DVR בשידור חי מוגבל לברירת המחדל של השרת</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">הגדרת זו עלולה לגרום להתנהגות בלתי צפויה אם \'הפעלת זרמי וידאו מדומים\' אינה מופעלת.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">הצג תפריט איכות סרטון מתקדם</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">תפריט איכות סרטון מתקדם מוצג</string>

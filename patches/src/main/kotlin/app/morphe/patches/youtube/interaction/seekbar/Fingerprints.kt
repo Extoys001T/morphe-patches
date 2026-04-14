@@ -1,6 +1,7 @@
 package app.morphe.patches.youtube.interaction.seekbar
 
 import app.morphe.patcher.Fingerprint
+import app.morphe.patcher.InstructionLocation.MatchAfterAnywhere
 import app.morphe.patcher.InstructionLocation.MatchAfterImmediately
 import app.morphe.patcher.InstructionLocation.MatchAfterWithin
 import app.morphe.patcher.OpcodesFilter
@@ -9,8 +10,8 @@ import app.morphe.patcher.literal
 import app.morphe.patcher.methodCall
 import app.morphe.patcher.newInstance
 import app.morphe.patcher.opcode
+import app.morphe.patcher.string
 import app.morphe.patches.youtube.video.quality.VideoStreamingDataToStringFingerprint
-import app.morphe.util.customLiteral
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
@@ -91,13 +92,13 @@ internal object TapToSeekFingerprint : Fingerprint(
             location = MatchAfterImmediately()
         ),
         methodCall(
-            smali = "Lj\$/util/Optional;->of(Ljava/lang/Object;)Lj\$/util/Optional;",
+            smali = "Lj$/util/Optional;->of(Ljava/lang/Object;)Lj$/util/Optional;",
             location = MatchAfterImmediately()
         ),
         opcode(Opcode.MOVE_RESULT_OBJECT, location = MatchAfterImmediately()),
         fieldAccess(
             opcode = Opcode.IPUT_OBJECT,
-            type = "Lj\$/util/Optional;",
+            type = "Lj$/util/Optional;",
             location = MatchAfterImmediately()
         ),
 
@@ -109,13 +110,14 @@ internal object SlideToSeekFingerprint : Fingerprint(
     accessFlags = listOf(AccessFlags.PRIVATE, AccessFlags.FINAL),
     returnType = "V",
     parameters = listOf("Landroid/view/View;", "F"),
-    filters = OpcodesFilter.opcodesToFilters(
-        Opcode.INVOKE_VIRTUAL,
-        Opcode.MOVE_RESULT,
-        Opcode.IF_EQZ,
-        Opcode.GOTO_16,
-    ),
-    custom = customLiteral { 67108864 } // TODO: Convert this to an instruction filter
+    filters = listOf(
+        opcode(Opcode.INVOKE_VIRTUAL),
+        opcode(Opcode.MOVE_RESULT, location = MatchAfterImmediately()),
+        opcode(Opcode.IF_EQZ, location = MatchAfterImmediately()),
+        opcode(Opcode.GOTO_16, location = MatchAfterImmediately()),
+
+        literal(67108864)
+    )
 )
 
 internal object FullscreenLargeSeekbarFeatureFlagFingerprint : Fingerprint(
@@ -139,3 +141,23 @@ internal object VideoStreamingDataAllowSeekingFingerprint : Fingerprint(
     )
 )
 
+private object FormatStreamModelClassFingerprint : Fingerprint(
+    returnType = "Ljava/lang/String;",
+    filters = listOf(
+        string("FormatStream(itag=")
+    )
+)
+
+// DVR window duration in seconds; 0 for non-DVR streams.
+// Caller multiplies result by 1e6 with 4-hour fallback when <= 0, logs "windowMaxMediaTimeUs".
+internal object FormatStreamModelMaxDvrDurationFingerprint : Fingerprint(
+    classFingerprint = FormatStreamModelClassFingerprint,
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "D",
+    parameters = listOf(),
+    filters = listOf(
+        opcode(Opcode.IGET_OBJECT),
+        fieldAccess(opcode = Opcode.IGET_WIDE, type = "D", location = MatchAfterImmediately()),
+        opcode(Opcode.RETURN_WIDE, location = MatchAfterImmediately()),
+    )
+)

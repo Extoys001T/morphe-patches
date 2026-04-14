@@ -70,9 +70,6 @@ Změny zahrnují:
   <string name="morphe_hide_artist_cards_title">Skrýt karty umělců</string>
   <string name="morphe_hide_artist_cards_summary_on">Karty umělců jsou skryté</string>
   <string name="morphe_hide_artist_cards_summary_off">Karty umělců jsou zobrazeny</string>
-  <string name="morphe_hide_chips_shelf_title">Skrýt police s čipy</string>
-  <string name="morphe_hide_chips_shelf_summary_on">Police s čipy je skrytá</string>
-  <string name="morphe_hide_chips_shelf_summary_off">Police s čipy je zobrazena</string>
   <string name="morphe_hide_community_posts_title">Skrýt příspěvky komunity</string>
   <string name="morphe_hide_community_posts_summary_on">Příspěvky komunity jsou skryté</string>
   <string name="morphe_hide_community_posts_summary_off">Příspěvky komunity jsou zobrazeny</string>
@@ -80,27 +77,32 @@ Změny zahrnují:
   <string name="morphe_hide_compact_banner_summary_on">Kompaktní bannery jsou skryté</string>
   <string name="morphe_hide_compact_banner_summary_off">Kompaktní bannery jsou zobrazeny</string>
   <string name="morphe_hide_expandable_card_title">Skrýt rozbalitelnou kartu</string>
-  <string name="morphe_hide_expandable_card_summary_on">Rozbalitelná karta pod videi je skryta</string>
-  <string name="morphe_hide_expandable_card_summary_off">Rozbalitelná karta pod videi je zobrazena</string>
+  <string name="morphe_hide_expandable_card_entry_1">Rozbalitelná karta pod videi je zobrazena</string>
+  <string name="morphe_hide_expandable_card_entry_2">Rozbalitelná karta pod videi je skryta</string>
+  <string name="morphe_hide_expandable_card_entry_3">Rozbalitelná karta pod videi je skryta</string>
+  <string name="morphe_hide_expandable_card_entry_4">Produktová a shrnující karta pod videi jsou skryté</string>
+  <string name="morphe_hide_expandable_card_entry_5">Rozbalitelné karty pod videi jsou skryté</string>
   <string name="morphe_hide_floating_microphone_button_title">Skrýt plovoucí tlačítko mikrofonu</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">Plovoucí tlačítko mikrofonu ve vyhledávání je skryto</string>
   <string name="morphe_hide_floating_microphone_button_summary_off">Plovoucí tlačítko mikrofonu ve vyhledávání je zobrazeno</string>
   <string name="morphe_hide_horizontal_shelves_title">Skrýt horizontální police</string>
-  <string name="morphe_hide_horizontal_shelves_summary_on">"Vodorovné police jsou skryté, například:
+  <string name="morphe_hide_horizontal_shelves_summary_on">"Horizontální police jsou skryté, například:
 
-• Nejnovější zprávy
+• Aktuality
+• Příspěvky ze Společenství, které se vám mohou líbit
 • Pokračovat ve sledování
 • Prozkoumat další kanály
-• Nejvhodnější
+• Prozkoumat další témata
+• Pro vás
+• Nejnovější videa
+• Nejrelevantnější
+• Příspěvky ze Společenství tvůrců
 • Nakupování
-• Znovu zhlédnout"</string>
+• Znovu si to pusťte"</string>
   <string name="morphe_hide_horizontal_shelves_summary_off">Vodorovné police jsou zobrazeny</string>
   <string name="morphe_hide_image_shelf_title">Skrýt poličku s obrázky</string>
   <string name="morphe_hide_image_shelf_summary_on">Polička s obrázky ve výsledcích vyhledávání je skrytá</string>
   <string name="morphe_hide_image_shelf_summary_off">Polička s obrázky ve výsledcích vyhledávání je zobrazena</string>
-  <string name="morphe_hide_latest_posts_title">Skrýt nejnovější příspěvky</string>
-  <string name="morphe_hide_latest_posts_summary_on">Nejnovější příspěvky jsou skryté</string>
-  <string name="morphe_hide_latest_posts_summary_off">Nejnovější příspěvky jsou zobrazené</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Skrýt tlačítko \'Nejnovější videa\'</string>
@@ -120,6 +122,9 @@ Změny zahrnují:
   <string name="morphe_hide_playables_title">Skrýt Playables</string>
   <string name="morphe_hide_playables_summary_on">Playables jsou skryté</string>
   <string name="morphe_hide_playables_summary_off">Playables jsou zobrazené</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Skrýt náhledy vyhledávacích výrazů</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Náhledy vyhledávacích výrazů jsou skryté</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Náhledy vyhledávacích výrazů jsou zobrazeny</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Skrýt tlačítko „Zobrazit více“</string>
@@ -296,6 +301,9 @@ Zobrazování YouTube Doodles může zabránit zobrazení vlastních záhlaví."
   <string name="morphe_hide_members_shelf_title">Skrýt poličku členů</string>
   <string name="morphe_hide_members_shelf_summary_on">Polička členů je skryta</string>
   <string name="morphe_hide_members_shelf_summary_off">Polička členů je zobrazena</string>
+  <string name="morphe_hide_posts_shelf_title">Skrýt police s příspěvky</string>
+  <string name="morphe_hide_posts_shelf_summary_on">Police s příspěvky je skrytá</string>
+  <string name="morphe_hide_posts_shelf_summary_off">Police s příspěvky je zobrazená</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_store_button_title">Skrýt tlačítko Obchod</string>
   <string name="morphe_hide_store_button_summary_on">Tlačítko Obchodu je skryté</string>
@@ -533,6 +541,8 @@ Zkontrolujte, zda je název balíčku správný a aplikace je nainstalována"</s
   <string name="morphe_livestream_dvr_title">Povolit záznam přímého přenosu</string>
   <string name="morphe_livestream_dvr_summary_on">Posouvání je povoleno u všech živých přenosů</string>
   <string name="morphe_livestream_dvr_summary_off">Posouvání nemusí být dostupné u živých přenosů</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Povolení této funkce může způsobit neočekávané chování při přechodu ve živém streamu, pokud není povolena možnost \'Simulovat video streamy\'.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Povolit posun pro hledání</string>
   <string name="morphe_slide_to_seek_summary_on">Posun pro hledání je povolen</string>
@@ -783,11 +793,17 @@ Podržte prst a klepněte pro otevření nastavení YouTube"</string>
 Podržte prst a klepněte pro otevření nastavení Morphe"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Vyskakovací menu</string>
-  <string name="morphe_hide_player_flyout_summary">Skrýt nebo zobrazit položky vyskakovacího menu přehrávače</string>
+  <string name="morphe_hide_player_flyout_summary">Skrýt nebo zobrazit komponenty menu vyskakovacího okna přehrávače</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Skrýt titulky</string>
   <string name="morphe_hide_player_flyout_captions_summary_on">Menu titulky je skryté</string>
   <string name="morphe_hide_player_flyout_captions_summary_off">Menu Titulky je zobrazeno</string>
+  <string name="morphe_hide_player_flyout_captions_footer_title">Skrýt patičku Titulky</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_on">Patička menu Titulky je skryta</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_off">Patička menu Titulky je zobrazeno</string>
+  <string name="morphe_hide_player_flyout_captions_header_title">Skrýt patičku Titulky</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_on">Skryto je hlavička nabídky Titulky</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_off">Zobrazeno je hlavička nabídky Titulky</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_additional_settings_title">Skrýt Další nastavení / Více</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_on">Menu Další nastavení je skryto</string>
@@ -833,17 +849,23 @@ Podržte prst a klepněte pro otevření nastavení Morphe"</string>
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu s zvukovými stopami je skrytý
 
 Abyste zobrazili menu s zvukovými stopami, změňte 'Zamaskované video proudy' na 'Android Reel' nebo 'TV'"</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_title">Skrýt stopu Zvuku</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_on">Skryto je nabídka Zvuková stopa</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_off">Zobrazeno je nabídka Zvuková stopa</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Skrýt Sledovat ve VR</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Nabídka Sledovat ve VR je skryta</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_off">Nabídka Sledovat ve VR je zobrazena</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_video_quality_title">Skrýt nabídku kvality videa</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_on">Nabídka kvality videa je skryta</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_off">Nabídka kvality videa je zobrazena</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_title">Skrýt zápatí menu kvality videa</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">Zápatí menu kvality videa je skryto</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">Zápatí menu kvality videa je zobrazeno</string>
+  <string name="morphe_hide_player_flyout_quality_title">Skrýt Kvalitu</string>
+  <string name="morphe_hide_player_flyout_quality_summary_on">Skryta je nabídka kvality videa</string>
+  <string name="morphe_hide_player_flyout_quality_summary_off">Zobrazena je nabídka kvality videa</string>
+  <string name="morphe_hide_player_flyout_quality_footer_title">Skrýt zápatí nabídky kvality videa</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_on">Skryto je zápatí nabídky kvality videa</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_off">Zobrazeno je zápatí nabídky kvality videa</string>
+  <string name="morphe_hide_player_flyout_quality_header_title">Skrýt Kvalitu</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_on">Skryta je hlavička nabídky kvality videa</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_off">Zobrazena je hlavička nabídky kvality videa</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Skrýt náhled automatického přehrávání</string>
   <string name="morphe_hide_autoplay_preview_summary_on">Náhled automatického přehrávání je skryt</string>
@@ -1644,6 +1666,12 @@ Omezení:
 • Některá zařízení nemohou vynutit AVC"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Chcete-li použít tuto funkci, změňte \'Zfalšovat video streamy\' na Android VR nebo Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Rozšířit dobu záznamu živého vysílání</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">Doba záznamu živého vysílání je rozšířena až na 7 dní</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">Doba záznamu živého vysílání je omezena na výchozí hodnotu serveru</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Toto nastavení může způsobovat neočekávané chování, pokud není povolena možnost \'Nahrávat falešné video streamy\'.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Zobrazit rozšířené menu kvality videa</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Zobrazuje se rozšířené menu kvality videa</string>

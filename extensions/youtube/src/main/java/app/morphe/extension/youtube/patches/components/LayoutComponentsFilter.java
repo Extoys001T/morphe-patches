@@ -57,12 +57,22 @@ public final class LayoutComponentsFilter extends Filter {
     private final StringFilterGroup notifyMe;
     private final StringFilterGroup singleItemInformationPanel;
     private final StringFilterGroup expandableMetadata;
+    private final ByteArrayFilterGroup productCardBuffer;
+    private final ByteArrayFilterGroup summaryCardBuffer;
     private final StringFilterGroup compactChannelBarInner;
     private final StringFilterGroup compactChannelBarInnerButton;
     private final ByteArrayFilterGroup joinMembershipButton;
     private final StringFilterGroup chipBar;
     private final StringFilterGroup channelProfile;
     private final StringFilterGroupList channelProfileGroupList;
+
+    public enum ExpandableCardStyle {
+        SHOW_ALL,
+        HIDE_PRODUCT_ONLY,
+        HIDE_SUMMARY_ONLY,
+        HIDE_PRODUCT_AND_SUMMARY,
+        HIDE_ALL
+    }
 
     public LayoutComponentsFilter() {
         exceptions.addPatterns(
@@ -82,8 +92,8 @@ public final class LayoutComponentsFilter extends Filter {
                 "cell_divider"
         );
 
-        final var chipsShelf = new StringFilterGroup(
-                Settings.HIDE_CHIPS_SHELF,
+        final var exploreTopicsShelf = new StringFilterGroup(
+                Settings.HIDE_HORIZONTAL_SHELVES,
                 "chips_shelf"
         );
 
@@ -94,7 +104,7 @@ public final class LayoutComponentsFilter extends Filter {
 
         addIdentifierCallbacks(
                 cellDivider,
-                chipsShelf,
+                exploreTopicsShelf,
                 liveChatReplay
         );
 
@@ -102,20 +112,21 @@ public final class LayoutComponentsFilter extends Filter {
 
         communityPosts = new StringFilterGroup(
                 Settings.HIDE_COMMUNITY_POSTS,
-                "post_base_wrapper", // may be obsolete and no longer needed.
-                "text_post_root.e",
                 "images_post_root.e",
-                "images_post_slim.e", // may be obsolete and no longer needed.
                 "images_post_root_slim.e",
-                "text_post_root_slim.e",
-                "post_base_wrapper_slim.e",
-                "poll_post_root.e",
-                "videos_post_root.e",
-                "post_shelf_slim.e",
-                "videos_post_responsive_root.e",
-                "text_post_responsive_root.e",
+                "images_post_slim.e", // may be obsolete and no longer needed.
                 "poll_post_responsive_root.e",
-                "shared_post_root.e"
+                "poll_post_root.e",
+                "post_base_wrapper", // may be obsolete and no longer needed.
+                "post_base_wrapper_slim.e",
+                "post_shelf_slim.e",
+                "shared_post_responsive_root.e",
+                "shared_post_root.e",
+                "text_post_responsive_root.e",
+                "text_post_root.e",
+                "text_post_root_slim.e",
+                "videos_post_responsive_root.e",
+                "videos_post_root.e"
         );
 
         final var subscribersCommunityGuidelines = new StringFilterGroup(
@@ -180,8 +191,8 @@ public final class LayoutComponentsFilter extends Filter {
                 "single_item_information_panel"
         );
 
-        final var latestPosts = new StringFilterGroup(
-                Settings.HIDE_LATEST_POSTS,
+        final var postsShelf = new StringFilterGroup(
+                Settings.HIDE_POSTS_SHELF,
                 "post_shelf"
         );
 
@@ -212,8 +223,18 @@ public final class LayoutComponentsFilter extends Filter {
         );
 
         expandableMetadata = new StringFilterGroup(
-                Settings.HIDE_EXPANDABLE_CARD,
-                "inline_expander"
+                null,
+                "expandable_metadata"
+        );
+
+        productCardBuffer = new ByteArrayFilterGroup(
+                null,
+                "gstatic.com/shopping"
+        );
+
+        summaryCardBuffer = new ByteArrayFilterGroup(
+                null,
+                "PAfeedback_genai"
         );
 
         final var compactChannelBar = new StringFilterGroup(
@@ -221,10 +242,20 @@ public final class LayoutComponentsFilter extends Filter {
                 "compact_channel_bar"
         );
 
+        final var relatedVideos = new StringFilterGroup(
+                Settings.HIDE_QUICK_ACTIONS_RELATED_VIDEOS,
+                "fullscreen_related_videos"
+        );
+
         final var playables = new StringFilterGroup(
                 Settings.HIDE_PLAYABLES,
                 "horizontal_gaming_shelf.e",
                 "mini_game_card.e"
+        );
+
+        final var quickActions = new StringFilterGroup(
+                Settings.HIDE_QUICK_ACTIONS,
+                "quick_actions"
         );
 
         final var imageShelf = new StringFilterGroup(
@@ -326,11 +357,13 @@ public final class LayoutComponentsFilter extends Filter {
                 forYouShelf,
                 imageShelf,
                 infoPanel,
-                latestPosts,
                 medicalPanel,
                 notifyMe,
                 paidPromotion,
                 playables,
+                postsShelf,
+                quickActions,
+                relatedVideos,
                 singleItemInformationPanel,
                 subscribedChannelsBar,
                 subscribersCommunityGuidelines,
@@ -362,8 +395,29 @@ public final class LayoutComponentsFilter extends Filter {
 
         // The groups are excluded from the filter due to the exceptions list below.
         // Filter them separately here.
-        if (matchedGroup == notifyMe || matchedGroup == surveys || matchedGroup == expandableMetadata) {
+        if (matchedGroup == notifyMe || matchedGroup == surveys) {
             return true;
+        }
+
+        if (matchedGroup == expandableMetadata) {
+            ExpandableCardStyle style = Settings.HIDE_EXPANDABLE_CARD.get();
+            switch (style) {
+                case HIDE_ALL -> {
+                    return true;
+                }
+                case HIDE_PRODUCT_ONLY -> {
+                    return productCardBuffer.check(buffer).isFiltered();
+                }
+                case HIDE_SUMMARY_ONLY -> {
+                    return summaryCardBuffer.check(buffer).isFiltered();
+                }
+                case HIDE_PRODUCT_AND_SUMMARY -> {
+                    return summaryCardBuffer.check(buffer).isFiltered() || productCardBuffer.check(buffer).isFiltered();
+                }
+                default -> {
+                    return false;
+                }
+            }
         }
 
         if (matchedGroup == channelProfile) {
@@ -748,6 +802,13 @@ public final class LayoutComponentsFilter extends Filter {
         }
 
         return false;
+    }
+
+    /**
+     * Injection point.
+     */
+    public static boolean hideSearchTermThumbnails() {
+        return Settings.HIDE_SEARCH_TERM_THUMBNAILS.get();
     }
 
     /**

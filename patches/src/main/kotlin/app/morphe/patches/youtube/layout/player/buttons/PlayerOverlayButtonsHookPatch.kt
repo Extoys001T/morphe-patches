@@ -12,12 +12,10 @@ import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
 import app.morphe.patches.shared.misc.mapping.resourceMappingPatch
-import app.morphe.patches.youtube.layout.miniplayer.EXTENSION_CLASS_DESCRIPTOR
+import app.morphe.patches.youtube.layout.miniplayer.EXTENSION_CLASS
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import java.lang.ref.WeakReference
-
-private const val PLAYER_BUTTON_OVERLAY_CLASS_DESCRIPTOR = "Lapp/morphe/extension/youtube/videoplayer/PlayerOverlayButton;"
 
 private lateinit var exploderButtonMethodRef : WeakReference<MutableMethod>
 private var exploderButtonInsertIndex = -1
@@ -49,7 +47,7 @@ internal val playerOverlayButtonsHookPatch = bytecodePatch {
                 // instead of white, making the fullscreen button appear gray instead of white.
                 addInstruction(
                     index + 1,
-                    "invoke-static { v$exploderButtonInsertRegister }, $EXTENSION_CLASS_DESCRIPTOR->fixMinimalMiniplayerFullscreenButtonTint(Landroid/view/View;)V"
+                    "invoke-static { v$exploderButtonInsertRegister }, $EXTENSION_CLASS->fixMinimalMiniplayerFullscreenButtonTint(Landroid/view/View;)V"
                 )
             }
         }

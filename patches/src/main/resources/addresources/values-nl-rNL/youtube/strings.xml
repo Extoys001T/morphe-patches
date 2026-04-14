@@ -70,37 +70,39 @@ Wijzigingen zijn:
   <string name="morphe_hide_artist_cards_title">Verberg artistkaarten</string>
   <string name="morphe_hide_artist_cards_summary_on">De artistkaarten zijn verborgen</string>
   <string name="morphe_hide_artist_cards_summary_off">De artistkaarten worden weergegeven</string>
-  <string name="morphe_hide_chips_shelf_title">Chipsrek verbergen</string>
-  <string name="morphe_hide_chips_shelf_summary_on">Chipsrek is verborgen</string>
-  <string name="morphe_hide_chips_shelf_summary_off">Chip Schap Zichtbaar</string>
   <string name="morphe_hide_community_posts_title">Community berichten verbergen</string>
   <string name="morphe_hide_community_posts_summary_on">Community berichten zijn verborgen</string>
   <string name="morphe_hide_community_posts_summary_off">Community berichten worden weergegeven</string>
   <string name="morphe_hide_compact_banner_title">Verberg compacte banners</string>
   <string name="morphe_hide_compact_banner_summary_on">Compacte banners zijn verborgen</string>
   <string name="morphe_hide_compact_banner_summary_off">Compacte banners worden weergegeven</string>
-  <string name="morphe_hide_expandable_card_title">Uitklapbare kaart verbergen</string>
-  <string name="morphe_hide_expandable_card_summary_on">Uitklapbare kaart onder video\'s is verborgen</string>
-  <string name="morphe_hide_expandable_card_summary_off">Uitklapbare kaart onder video\'s is getoond</string>
+  <string name="morphe_hide_expandable_card_title">Uitklapbare kaarten verbergen</string>
+  <string name="morphe_hide_expandable_card_entry_1">Uitklapbare kaarten onder video\'s worden weergegeven</string>
+  <string name="morphe_hide_expandable_card_entry_2">Alleen de productkaart onder video’s is verborgen</string>
+  <string name="morphe_hide_expandable_card_entry_3">Alleen de samenvattingskaart onder video’s is verborgen</string>
+  <string name="morphe_hide_expandable_card_entry_4">Product- en samenvattingskaart onder video\'s zijn verborgen</string>
+  <string name="morphe_hide_expandable_card_entry_5">Uitklapbare kaarten onder video\'s zijn verborgen</string>
   <string name="morphe_hide_floating_microphone_button_title">Verberg zwevende microfoonknop</string>
   <string name="morphe_hide_floating_microphone_button_summary_on">Zwevende microfoonknop in zoeken is verborgen</string>
   <string name="morphe_hide_floating_microphone_button_summary_off">Zwevende microfoonknop in zoeken wordt getoond</string>
   <string name="morphe_hide_horizontal_shelves_title">Horizontale planken verbergen</string>
   <string name="morphe_hide_horizontal_shelves_summary_on">"Horizontale planken zijn verborgen, zoals:
 
-• Breaking news
-• Verder kijken
-• Meer kanalen ontdekken
+• Actueel nieuws
+• Community-berichten die je mogelijk leuk vindt
+• Vervolg met kijken
+• Bekijk meer kanalen
+• Bekijk meer onderwerpen
+• Voor jou
+• Laatste video's
 • Meest relevant
+• Berichten uit de Creator's Community
 • Winkelen
-• Opnieuw bekijken"</string>
+• Bekijk het opnieuw"</string>
   <string name="morphe_hide_horizontal_shelves_summary_off">Horizontale planken worden getoond</string>
   <string name="morphe_hide_image_shelf_title">Afbeeldingenplank verbergen</string>
   <string name="morphe_hide_image_shelf_summary_on">Afbeeldingenplank in zoekresultaten is verborgen</string>
   <string name="morphe_hide_image_shelf_summary_off">Afbeeldingenplank in zoekresultaten is getoond</string>
-  <string name="morphe_hide_latest_posts_title">Nieuwste berichten verbergen</string>
-  <string name="morphe_hide_latest_posts_summary_on">Nieuwste berichten zijn verborgen</string>
-  <string name="morphe_hide_latest_posts_summary_off">Nieuwste berichten worden weergegeven</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
   <string name="morphe_hide_latest_videos_button_title">Verberg \'Laatste video\'s\' knop</string>
@@ -120,6 +122,9 @@ Wijzigingen zijn:
   <string name="morphe_hide_playables_title">Speelbare items verbergen</string>
   <string name="morphe_hide_playables_summary_on">Speelbare items zijn verborgen</string>
   <string name="morphe_hide_playables_summary_off">Spellen worden getoond</string>
+  <string name="morphe_hide_search_term_thumbnails_title">Verberg zoekterm thumbnails</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_on">Zoekterm thumbnails zijn verborgen</string>
+  <string name="morphe_hide_search_term_thumbnails_summary_off">Zoekterm thumbnails worden weergegeven</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
   <string name="morphe_hide_show_more_button_title">Verberg knop \'Meer weergeven\'</string>
@@ -296,6 +301,9 @@ Het tonen van YouTube Doodles kan voorkomen dat aangepaste headers worden weerge
   <string name="morphe_hide_members_shelf_title">Ledenplank verbergen</string>
   <string name="morphe_hide_members_shelf_summary_on">Ledenplank is verborgen</string>
   <string name="morphe_hide_members_shelf_summary_off">Ledenplank wordt weergegeven</string>
+  <string name="morphe_hide_posts_shelf_title">Berichtenplank verbergen</string>
+  <string name="morphe_hide_posts_shelf_summary_on">Berichtenplank is verborgen</string>
+  <string name="morphe_hide_posts_shelf_summary_off">Berichtenplank is zichtbaar</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="morphe_hide_store_button_title">Verberg \'Winkel\' knop</string>
   <string name="morphe_hide_store_button_summary_on">Knop \'Winkel\' is verborgen</string>
@@ -533,6 +541,8 @@ Controleer of de pakketnaam correct is en de app is geïnstalleerd"</string>
   <string name="morphe_livestream_dvr_title">Livestream DVR inschakelen</string>
   <string name="morphe_livestream_dvr_summary_on">Zoeken is toegestaan op alle livestreams</string>
   <string name="morphe_livestream_dvr_summary_off">Zoeken is mogelijk niet beschikbaar op livestreams</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_livestream_dvr_user_dialog_message">Het inschakelen ervan kan onverwacht livestream-zoeken veroorzaken als \'Video streams vervalsen\' niet is ingeschakeld.</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
   <string name="morphe_slide_to_seek_title">Schuiven om te zoeken inschakelen</string>
   <string name="morphe_slide_to_seek_summary_on">Schuiven om te zoeken is ingeschakeld</string>
@@ -783,11 +793,17 @@ Ingedrukt houden om YouTube-instellingen te openen"</string>
 Ingedrukt houden om Morphe-instellingen te openen"</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
   <string name="morphe_hide_player_flyout_title">Uitklapmenu</string>
-  <string name="morphe_hide_player_flyout_summary">Items in het uitklapmenu van de speler verbergen of weergeven</string>
+  <string name="morphe_hide_player_flyout_summary">Verberg of toon componenten van het speler flyout-menu</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_captions_title">Ondertitels verbergen</string>
   <string name="morphe_hide_player_flyout_captions_summary_on">Ondertitels-menu is verborgen</string>
   <string name="morphe_hide_player_flyout_captions_summary_off">Ondertitels-menu wordt weergegeven</string>
+  <string name="morphe_hide_player_flyout_captions_footer_title">Captions-footer verbergen</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_on">Captions-menu-footer is verborgen</string>
+  <string name="morphe_hide_player_flyout_captions_footer_summary_off">Captions-menu-footer wordt weergegeven</string>
+  <string name="morphe_hide_player_flyout_captions_header_title">Captions-header verbergen</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_on">Ondertitels-menu is verborgen</string>
+  <string name="morphe_hide_player_flyout_captions_header_summary_off">Ondertitels-menu wordt weergegeven</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_additional_settings_title">Verberg \'Extra instellingen / Meer\'</string>
   <string name="morphe_hide_player_flyout_additional_settings_summary_on">Menu \'Extra instellingen / Meer\' is verborgen</string>
@@ -833,17 +849,23 @@ Ingedrukt houden om Morphe-instellingen te openen"</string>
   <string name="morphe_hide_player_flyout_audio_track_not_available">"Menu voor audio-spoor is verborgen
 
 Om het menu voor audio-spoor te tonen, verander 'Spoof video streams' naar 'Android Reel' of 'TV'"</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_title">Verberg Audiotrack</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_on">Menu Audiotrack is verborgen</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_summary_off">Menu Audiotrack wordt weergegeven</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
   <string name="morphe_hide_player_flyout_watch_in_vr_title">Verberg Bekijk in VR</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_on">Menu Bekijk in VR is verborgen</string>
   <string name="morphe_hide_player_flyout_watch_in_vr_summary_off">Menu Bekijk in VR wordt weergegeven</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
-  <string name="morphe_hide_player_flyout_video_quality_title">Verberg menu \'Kwaliteit\'</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_on">Menu \'Kwaliteit\' is verborgen</string>
-  <string name="morphe_hide_player_flyout_video_quality_summary_off">Menu \'Kwaliteit\' is zichtbaar</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_title">Verberg voettekst van menu \'Kwaliteit\'</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_on">Voettekst van menu \'Kwaliteit\' is verborgen</string>
-  <string name="morphe_hide_player_flyout_video_quality_footer_summary_off">Voettekst van menu \'Kwaliteit\' wordt weergegeven</string>
+  <string name="morphe_hide_player_flyout_quality_title">Kwaliteit</string>
+  <string name="morphe_hide_player_flyout_quality_summary_on">Videokwaliteitsmenu is verborgen</string>
+  <string name="morphe_hide_player_flyout_quality_summary_off">Videokwaliteitsmenu is zichtbaar</string>
+  <string name="morphe_hide_player_flyout_quality_footer_title">Verberg voettekst van video-kwaliteitsmenu</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_on">Voettekst van video-kwaliteitsmenu is verborgen</string>
+  <string name="morphe_hide_player_flyout_quality_footer_summary_off">Voettekst van video-kwaliteitsmenu wordt weergegeven</string>
+  <string name="morphe_hide_player_flyout_quality_header_title">Kwaliteit</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_on">Voettekst van video-kwaliteitsmenu is verborgen</string>
+  <string name="morphe_hide_player_flyout_quality_header_summary_off">Voettekst van video-kwaliteitsmenu wordt weergegeven</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
   <string name="morphe_hide_autoplay_preview_title">Verberg voorbeeld autoplay</string>
   <string name="morphe_hide_autoplay_preview_summary_on">Autoplay voorbeeld is verborgen</string>
@@ -1642,6 +1664,12 @@ Beperkingen:
 • Sommige apparaten kunnen AVC niet forceren"</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
   <string name="morphe_force_avc_codec_not_available">Om deze functie te gebruiken, wijzig \'Videostreams spoofen\' naar Android VR of Android Studio</string>
+  <!-- interaction.seekbar.expandLivestreamDvrDurationPatch -->
+  <string name="morphe_expand_livestream_dvr_duration_title">Livestream DVR-duur uitbreiden</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_on">De Livestream DVR-duur is uitgebreid tot 7 dagen</string>
+  <string name="morphe_expand_livestream_dvr_duration_summary_off">De Livestream DVR-duur is beperkt tot de standaardserverwaarde</string>
+  <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_livestream_dvr_duration_user_dialog_message">Deze instelling kan onverwacht gedrag veroorzaken als \'Videostreams vervalsen\' niet is ingeschakeld.</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
   <string name="morphe_advanced_video_quality_menu_title">Geavanceerd menu voor videokwaliteit weergeven</string>
   <string name="morphe_advanced_video_quality_menu_summary_on">Geavanceerd menu voor videokwaliteit wordt weergegeven</string>

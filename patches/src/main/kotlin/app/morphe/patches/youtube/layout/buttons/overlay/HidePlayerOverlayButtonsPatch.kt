@@ -29,7 +29,7 @@ import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
-private const val EXTENSION_CLASS_DESCRIPTOR =
+private const val EXTENSION_CLASS =
     "Lapp/morphe/extension/youtube/patches/HidePlayerOverlayButtonsPatch;"
 private const val FILTER_CLASS_DESCRIPTOR =
     "Lapp/morphe/extension/youtube/patches/components/QuickActionButtonsFilter;"
@@ -92,7 +92,7 @@ val hidePlayerOverlayButtonsPatch = bytecodePatch(
 
                 addInstruction(
                     insertIndex,
-                    "invoke-static { v$viewRegister }, $EXTENSION_CLASS_DESCRIPTOR" +
+                    "invoke-static { v$viewRegister }, $EXTENSION_CLASS" +
                             "->hidePreviousNextButtons(Landroid/view/View;)V",
                 )
             }
@@ -105,7 +105,7 @@ val hidePlayerOverlayButtonsPatch = bytecodePatch(
         MediaRouteButtonFingerprint.method.addInstructions(
             0,
             """
-                invoke-static { p1 }, $EXTENSION_CLASS_DESCRIPTOR->getCastButtonOverrideV2(I)I
+                invoke-static { p1 }, $EXTENSION_CLASS->getCastButtonOverrideV2(I)I
                 move-result p1
             """
         )
@@ -118,7 +118,7 @@ val hidePlayerOverlayButtonsPatch = bytecodePatch(
                 fingerprint.let {
                     it.method.insertLiteralOverride(
                         it.instructionMatches.first().index,
-                        "$EXTENSION_CLASS_DESCRIPTOR->getCastButtonOverrideV2(Z)Z"
+                        "$EXTENSION_CLASS->getCastButtonOverrideV2(Z)Z"
                     )
                 }
             }
@@ -135,7 +135,7 @@ val hidePlayerOverlayButtonsPatch = bytecodePatch(
 
                 addInstruction(
                     viewIndex + 1,
-                    "invoke-static { v$viewRegister }, $EXTENSION_CLASS_DESCRIPTOR->" +
+                    "invoke-static { v$viewRegister }, $EXTENSION_CLASS->" +
                             "hideCaptionsButton(Landroid/widget/ImageView;)V",
                 )
             }
@@ -160,7 +160,7 @@ val hidePlayerOverlayButtonsPatch = bytecodePatch(
             addInstructionsWithLabels(
                 constIndex,
                 """
-                    invoke-static {}, $EXTENSION_CLASS_DESCRIPTOR->hideAutoplayButton()Z
+                    invoke-static {}, $EXTENSION_CLASS->hideAutoplayButton()Z
                     move-result v$constRegister
                     if-nez v$constRegister, :hidden
                 """,
@@ -179,7 +179,7 @@ val hidePlayerOverlayButtonsPatch = bytecodePatch(
 
                 addInstruction(
                     titleAnchorIndex + 1,
-                    "invoke-static { v$titleAnchorRegister }, $EXTENSION_CLASS_DESCRIPTOR->setTitleAnchorStartMargin(Landroid/view/View;)V"
+                    "invoke-static { v$titleAnchorRegister }, $EXTENSION_CLASS->setTitleAnchorStartMargin(Landroid/view/View;)V"
                 )
 
                 val playerCollapseButtonIndex = it.instructionMatches[1].index
@@ -187,7 +187,7 @@ val hidePlayerOverlayButtonsPatch = bytecodePatch(
 
                 addInstruction(
                     playerCollapseButtonIndex + 1,
-                    "invoke-static { v$playerCollapseButtonRegister }, $EXTENSION_CLASS_DESCRIPTOR->hideCollapseButton(Landroid/widget/ImageView;)V"
+                    "invoke-static { v$playerCollapseButtonRegister }, $EXTENSION_CLASS->hideCollapseButton(Landroid/widget/ImageView;)V"
                 )
             }
         }
@@ -205,7 +205,7 @@ val hidePlayerOverlayButtonsPatch = bytecodePatch(
                 addInstructionsWithLabels(
                     insertIndex,
                     """
-                        invoke-static { v$insertRegister }, $EXTENSION_CLASS_DESCRIPTOR->hideFullscreenButton(Landroid/widget/ImageView;)Landroid/widget/ImageView;
+                        invoke-static { v$insertRegister }, $EXTENSION_CLASS->hideFullscreenButton(Landroid/widget/ImageView;)Landroid/widget/ImageView;
                         move-result-object v$insertRegister
                         if-nez v$insertRegister, :show
                         return-void
@@ -230,7 +230,7 @@ val hidePlayerOverlayButtonsPatch = bytecodePatch(
                         # Move the inflated layout to a temporary register.
                         # The result of the inflate method is by default not moved to a register after the method is called.
                         move-result-object v$freeRegister
-                        invoke-static { v$freeRegister }, $EXTENSION_CLASS_DESCRIPTOR->hidePlayerControlButtonsBackground(Landroid/view/View;)V
+                        invoke-static { v$freeRegister }, $EXTENSION_CLASS->hidePlayerControlButtonsBackground(Landroid/view/View;)V
                     """
                 )
             }
