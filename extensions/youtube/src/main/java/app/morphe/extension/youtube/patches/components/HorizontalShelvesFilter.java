@@ -65,11 +65,6 @@ final class HorizontalShelvesFilter extends Filter {
                 new ByteArrayFilterGroup(
                         Settings.HIDE_TICKET_SHELF,
                         "ticket_item.e"
-                ),
-                new ByteArrayFilterGroup(
-                        Settings.HIDE_WATCH_HISTORY_SHELF,
-                        "horizontal_video_shelf",
-                        "FEhistory"
                 )
         );
     }
@@ -98,6 +93,15 @@ final class HorizontalShelvesFilter extends Filter {
         if (contentIndex != 0) {
             return false;
         }
+        
+        // Check watch history shelf separately with Library tab condition
+        ByteArrayFilterGroup.FilterGroupResult watchHistoryResult = 
+            new ByteArrayFilterGroup(Settings.HIDE_WATCH_HISTORY_SHELF, "FEhistory").check(buffer);
+        if (watchHistoryResult.isFiltered()) {
+            // Only hide if NOT in Library tab
+            return NavigationButton.getSelectedNavigationButton() != NavigationButton.LIBRARY;
+        }
+        
         if (generalBuffers.check(buffer).isFiltered()) {
             return true;
         }
