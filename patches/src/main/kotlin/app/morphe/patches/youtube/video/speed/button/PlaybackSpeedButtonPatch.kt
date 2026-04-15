@@ -2,7 +2,7 @@ package app.morphe.patches.youtube.video.speed.button
 
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.patch.resourcePatch
-import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
+import app.morphe.patches.youtube.layout.buttons.overlay.hidePlayerOverlayButtonsPatch
 import app.morphe.patches.youtube.layout.player.buttons.addPlayerBottomButton
 import app.morphe.patches.youtube.layout.player.buttons.playerOverlayButtonsHookPatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
@@ -10,7 +10,6 @@ import app.morphe.patches.youtube.misc.playercontrols.addLegacyBottomControl
 import app.morphe.patches.youtube.misc.playercontrols.initializeLegacyBottomControl
 import app.morphe.patches.youtube.misc.playercontrols.injectVisibilityCheckCall
 import app.morphe.patches.youtube.misc.playercontrols.legacyPlayerControlsPatch
-import app.morphe.patches.youtube.misc.settings.PreferenceScreen
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.video.information.userSelectedPlaybackSpeedHook
 import app.morphe.patches.youtube.video.information.videoInformationPatch
@@ -46,14 +45,12 @@ val playbackSpeedButtonPatch = bytecodePatch(
         settingsPatch,
         customPlaybackSpeedPatch,
         playbackSpeedButtonResourcePatch,
+        hidePlayerOverlayButtonsPatch,
         playerOverlayButtonsHookPatch,
         videoInformationPatch,
     )
 
     execute {
-        PreferenceScreen.PLAYER.addPreferences(
-            SwitchPreference("morphe_playback_speed_dialog_button"),
-        )
 
         addPlayerBottomButton(EXTENSION_BUTTON)
 
