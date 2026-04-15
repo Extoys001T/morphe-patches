@@ -65,6 +65,10 @@ final class HorizontalShelvesFilter extends Filter {
                 new ByteArrayFilterGroup(
                         Settings.HIDE_TICKET_SHELF,
                         "ticket_item.e"
+                ),
+                new ByteArrayFilterGroup(
+                        Settings.HIDE_WATCH_HISTORY_SHELF,
+                        "FEhistory"
                 )
         );
     }
