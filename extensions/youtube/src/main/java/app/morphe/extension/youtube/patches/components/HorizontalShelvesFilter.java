@@ -68,6 +68,7 @@ final class HorizontalShelvesFilter extends Filter {
                 ),
                 new ByteArrayFilterGroup(
                         Settings.HIDE_WATCH_HISTORY_SHELF,
+                        "horizontal_video_shelf",
                         "FEhistory"
                 )
         );
