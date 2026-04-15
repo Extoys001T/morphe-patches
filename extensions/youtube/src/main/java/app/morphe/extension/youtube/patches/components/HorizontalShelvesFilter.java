@@ -94,12 +94,10 @@ final class HorizontalShelvesFilter extends Filter {
             return false;
         }
         
-        // Check watch history shelf separately with Library tab condition
-        ByteArrayFilterGroup.FilterGroupResult watchHistoryResult = 
-            new ByteArrayFilterGroup(Settings.HIDE_WATCH_HISTORY_SHELF, "FEhistory").check(buffer);
-        if (watchHistoryResult.isFiltered()) {
-            // Only hide if NOT in Library tab
-            return NavigationButton.getSelectedNavigationButton() != NavigationButton.LIBRARY;
+        // If hide watch history is enabled and we're in Library tab, hide everything
+        if (Settings.HIDE_WATCH_HISTORY_SHELF.get() 
+                && NavigationButton.getSelectedNavigationButton() == NavigationButton.LIBRARY) {
+            return true;
         }
         
         if (generalBuffers.check(buffer).isFiltered()) {
