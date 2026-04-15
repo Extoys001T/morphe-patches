@@ -94,12 +94,6 @@ final class HorizontalShelvesFilter extends Filter {
             return false;
         }
         
-        // If hide watch history is enabled and we're in Library tab, hide everything
-        if (Settings.HIDE_WATCH_HISTORY_SHELF.get() 
-                && NavigationButton.getSelectedNavigationButton() == NavigationButton.LIBRARY) {
-            return true;
-        }
-        
         if (generalBuffers.check(buffer).isFiltered()) {
             return true;
         }

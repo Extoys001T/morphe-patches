@@ -64,6 +64,7 @@ public final class NavigationBarPatch {
             put(NavigationButton.NOTIFICATIONS, Settings.HIDE_NOTIFICATIONS_BUTTON.get());
             put(NavigationButton.SHORTS, Settings.HIDE_SHORTS_BUTTON.get());
             put(NavigationButton.SUBSCRIPTIONS, Settings.HIDE_SUBSCRIPTIONS_BUTTON.get());
+            put(NavigationButton.LIBRARY, Settings.HIDE_LIBRARY_BUTTON.get() || Settings.HIDE_WATCH_HISTORY_SHELF.get());
         }
     };
 
